@@ -1,0 +1,1718 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Apprentissage du langage [Kotlin 2.4] par l’exemple">
+      
+      
+        <meta name="author" content="Serge Tahé">
+      
+      
+        <link rel="canonical" href="https://stahe.github.io/kotlin-oct-2026/installation-de-lenvironnement-de-travail.html">
+      
+      
+        <link rel="prev" href="introduction.html">
+      
+      
+        <link rel="next" href="les-bases-du-langage-kotlin.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>2. Installation de l'environnement de travail - Apprentissage du langage [Kotlin 2.4] par l’exemple</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/focus.css">
+    
+      <link rel="stylesheet" href="stylesheets/bidi.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBZC3JVJNR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    var siteName = "Apprentissage du langage [Kotlin 2.4] par l’exemple";
+    gtag('config', 'G-EBZC3JVJNR', {
+        'page_title': siteName
+    });
+  </script>
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#2-installation-de-lenvironnement-de-travail" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="Apprentissage du langage [Kotlin 2.4] par l’exemple" class="md-header__button md-logo" aria-label="Apprentissage du langage [Kotlin 2.4] par l’exemple" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Apprentissage du langage [Kotlin 2.4] par l’exemple
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              2. Installation de l'environnement de travail
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Passer en mode sombre"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Passer en mode sombre" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Passer en mode clair"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Passer en mode clair" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://stahe.github.io/kotlin-oct-2026" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="Apprentissage du langage [Kotlin 2.4] par l’exemple" class="md-nav__button md-logo" aria-label="Apprentissage du langage [Kotlin 2.4] par l’exemple" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Apprentissage du langage [Kotlin 2.4] par l’exemple
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://stahe.github.io/kotlin-oct-2026" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Accueil
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="introduction.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Installation de l'environnement de travail
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="installation-de-lenvironnement-de-travail.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Installation de l'environnement de travail
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#21-le-jdk-25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1. Le JDK 25
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1. Le JDK 25">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#211-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1.1. Installation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#212-les-commandes-du-jdk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1.2. Les commandes du JDK
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22-le-compilateur-kotlin-en-ligne-de-commande" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2. Le compilateur Kotlin en ligne de commande
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2. Le compilateur Kotlin en ligne de commande">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#221-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.1. Installation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222-les-commandes-du-compilateur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.2. Les commandes du compilateur
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23-gradle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3. Gradle
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.3. Gradle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#231-le-role-de-gradle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3.1. Le rôle de Gradle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#232-le-wrapper-gradle-rien-a-installer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3.2. Le wrapper Gradle : rien à installer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#233-les-commandes-gradle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3.3. Les commandes Gradle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#234-maven-central-et-le-cache-de-gradle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3.4. Maven Central et le cache de Gradle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#235-la-syntaxe-kotlin-dsl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3.5. La syntaxe Kotlin DSL
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24-lediteur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4. L&#x27;éditeur
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.4. L&#39;éditeur">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#241-intellij-idea" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4.1. IntelliJ IDEA
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#242-vs-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4.2. VS Code
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#243-android-studio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4.3. Android Studio
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#25-un-premier-programme-le-fichier-hellokt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5. Un premier programme : le fichier Hello.kt
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.5. Un premier programme : le fichier Hello.kt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#251-le-programme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5.1. Le programme
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#252-compilation-et-execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5.2. Compilation et exécution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#253-ce-que-produit-le-compilateur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5.3. Ce que produit le compilateur
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#26-un-projet-gradle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6. Un projet Gradle
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.6. Un projet Gradle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#261-structure-du-projet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6.1. Structure du projet
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#262-compilation-et-execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6.2. Compilation et exécution
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#27-un-projet-de-plusieurs-modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.7. Un projet de plusieurs modules
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.7. Un projet de plusieurs modules">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#271-la-construction-multi-projets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.7.1. La construction multi-projets
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#272-un-projet-avec-plusieurs-fonctions-main" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.7.2. Un projet avec plusieurs fonctions main
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#273-un-paquetage-par-programme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.7.3. Un paquetage par programme
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#28-les-exemples-du-document" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.8. Les exemples du document
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="les-bases-du-langage-kotlin.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Les bases du langage Kotlin
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="classes-interfaces-classes-de-donnees.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Classes, interfaces, classes de données
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="classes-kotlin-dusage-courant.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Classes Kotlin d'usage courant
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="architectures-en-couches.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Architectures en couches
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="types-fonctionnels-lambdas-et-evenements.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Types fonctionnels, lambdas et événements
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="les-threads-dexecution.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. Les threads d'exécution
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="la-programmation-asynchrone-avec-les-coroutines.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. La programmation asynchrone avec les coroutines
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lacces-aux-bases-de-donnees-avec-jdbc.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. L'accès aux bases de données avec JDBC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="hibernate.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. Hibernate
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="programmation-internet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. Programmation Internet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="services-web.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13. Services web
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pour-aller-plus-loin.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    14. Pour aller plus loin
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="annexes.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    15. Annexes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="2-installation-de-lenvironnement-de-travail">2. <span style="color: #2e74b5">Installation de l&#x27;environnement de travail</span></h1>
+<p>L&#x27;environnement de travail du développeur Kotlin comprend trois éléments indépendants :</p>
+<ul>
+<li>le <strong>JDK</strong> (« Java Development Kit ») : Kotlin, tel que nous l&#x27;utilisons dans ce document, est compilé en <strong>bytecode</strong> et exécuté par la <strong>machine virtuelle Java</strong> (JVM), exactement comme un programme Java. Le JDK fournit cette machine virtuelle, la commande <em>[java]</em> qui exécute les programmes, les bibliothèques standard de Java SE (que Kotlin utilise directement : fichiers, réseau, dates, threads…) et des outils comme <em>[javap]</em> ou <em>[jar]</em> ;</li>
+<li>un outil de <strong>construction</strong> des projets, ici <strong>Gradle</strong> : il télécharge le compilateur Kotlin et les bibliothèques dont un projet a besoin, compile le projet, exécute ses tests et le met en paquet ;</li>
+<li>un <strong>éditeur</strong> ou un <strong>IDE</strong> (environnement de développement intégré) : <em>[IntelliJ IDEA]</em>, conçu par la société qui a créé Kotlin, est le choix naturel ; <em>[VS Code]</em> avec l&#x27;extension Kotlin est une autre possibilité. L&#x27;IDE s&#x27;appuie sur le JDK et sait lire les projets Gradle.</li>
+</ul>
+<p>Le compilateur Kotlin lui-même ne fait pas partie de cette liste : Gradle le télécharge pour chaque projet, et IntelliJ IDEA l&#x27;embarque. On peut néanmoins l&#x27;installer à part, sous la forme de la commande <em>[kotlinc]</em>, pour compiler un fichier isolé : nous le ferons pour notre premier programme, mais c&#x27;est facultatif.</p>
+<p>Ce document utilise les commandes <em>[java]</em>, <em>[kotlinc]</em> et <em>[gradlew]</em> pour toutes les opérations : elles fonctionnent de la même façon sous Windows, Linux et macOS, et quel que soit l&#x27;éditeur choisi.</p>
+<h2 id="21-le-jdk-25">2.1. <span style="color: #2e74b5">Le JDK 25</span></h2>
+<h3 id="211-installation">2.1.1. <span style="color: #1f4d78">Installation</span></h3>
+<p>Il existe plusieurs distributions du JDK, toutes construites à partir du code d&#x27;OpenJDK et équivalentes pour notre usage. Nous conseillons <strong>Eclipse Temurin</strong>, distribution libre et gratuite de la fondation Eclipse, qui se télécharge à l&#x27;adresse <a href="https://adoptium.net/">https://adoptium.net</a> : on y choisit la version <strong>25 - LTS</strong>, le système d&#x27;exploitation et le type de paquet (sous Windows, un installateur <em>[.msi]</em>). Sous Windows, on peut aussi l&#x27;installer depuis un terminal (PowerShell ou invite de commandes) avec le gestionnaire de paquets <em>[winget]</em> :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>winget install EclipseAdoptium.Temurin.25.JDK
+</code></pre></div></td></tr></table></div>
+<p>Il faut choisir le <strong>JDK</strong> (qui contient tout) et non le JRE seul (qui ne permet que d&#x27;exécuter des programmes déjà compilés). Lors de l&#x27;installation sous Windows, on coche les options qui ajoutent le JDK au <em>[PATH]</em> et qui définissent la variable d&#x27;environnement <em>[JAVA_HOME]</em> : Gradle, le compilateur <em>[kotlinc]</em> et les IDE s&#x27;en servent pour trouver le JDK. Sous Linux, le JDK est disponible dans les dépôts des principales distributions (par exemple <strong><em>[sudo apt install openjdk-25-jdk]</em></strong> sous Ubuntu).</p>
+<p>Après l&#x27;installation, on vérifie dans un <strong>nouveau</strong> terminal que la commande <em>[java]</em> est disponible et donne la version du JDK :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>&gt; java --version
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>openjdk 25.0.4 2026-07-21 LTS
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>OpenJDK Runtime Environment Temurin-25.0.4+7 (build 25.0.4+7-LTS)
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a>OpenJDK 64-Bit Server VM Temurin-25.0.4+7 (build 25.0.4+7-LTS, mixed mode, sharing)
+</code></pre></div></td></tr></table></div>
+<p>Ces résultats ont été obtenus avec le JDK Temurin 25.0.4 utilisé pour écrire ce document. La version exacte dépend de la date de l&#x27;installation : les mises à jour correctives paraissent chaque trimestre. Tous les JDK 25.0.x conviennent pour ce document. Plusieurs JDK peuvent cohabiter sur un même poste : c&#x27;est le premier trouvé dans le <em>[PATH]</em> qui répond à la commande <em>[java]</em>.</p>
+<p>Le JDK contient aussi le compilateur Java <em>[javac]</em> (<strong><em>[javac --version]</em></strong> affiche <em>[javac 25.0.4]</em>). Nous n&#x27;en aurons pas besoin : le compilateur Kotlin produit lui-même le bytecode. Mais il est là, et un projet Gradle peut mêler sans difficulté des fichiers Kotlin et des fichiers Java, qui s&#x27;utilisent mutuellement.</p>
+<h3 id="212-les-commandes-du-jdk">2.1.2. <span style="color: #1f4d78">Les commandes du JDK</span></h3>
+<p>Voici les commandes du JDK que nous utiliserons :</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><b>Commande</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><b>Rôle</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><i><b>[java -jar programme.jar]</b></i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">exécute le programme contenu dans une archive <i>[.jar]</i> dont le manifeste désigne la classe principale</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><i><b>[java -cp classes Classe]</b></i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">exécute la fonction <i>[main]</i> d&#x27;une classe compilée, cherchée dans le chemin de classes (<i><b>[-cp]</b></i>, « class path »)</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><i><b>[javap -cp classes Classe]</b></i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">affiche les membres d&#x27;une classe compilée : nous l&#x27;utiliserons pour voir ce que le compilateur Kotlin a produit</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><i><b>[jar]</b></i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">crée ou lit une archive <i>[.jar]</i> (un fichier zip de classes compilées)</div></td></tr></table>
+
+<p>Le JDK fournit aussi l&#x27;interpréteur interactif <em>[jshell]</em>, mais il n&#x27;accepte que des instructions Java. Pour essayer une expression Kotlin sans écrire de programme, on utilise plutôt les outils d&#x27;IntelliJ IDEA présentés plus loin.</p>
+<h2 id="22-le-compilateur-kotlin-en-ligne-de-commande">2.2. <span style="color: #2e74b5">Le compilateur Kotlin en ligne de commande</span></h2>
+<h3 id="221-installation">2.2.1. <span style="color: #1f4d78">Installation</span></h3>
+<p>Cette installation est <strong>facultative</strong> : les projets Gradle n&#x27;en ont pas besoin, et IntelliJ IDEA embarque son propre compilateur. Elle permet de compiler et d&#x27;exécuter un fichier Kotlin isolé depuis un terminal, sans créer de projet.</p>
+<p>Le compilateur se télécharge sur la page des versions publiées du projet Kotlin, sur GitHub (<a href="https://github.com/JetBrains/kotlin/releases">https://github.com/JetBrains/kotlin/releases</a>) : dans la rubrique « Assets » de la version 2.4.20, on prend l&#x27;archive <em>[kotlin-compiler-2.4.20.zip]</em>. On la décompresse dans un dossier, par exemple <em>[C:\Program Files\kotlinc]</em>, et on ajoute son sous-dossier <em>[bin]</em> au <em>[PATH]</em> (Windows : « Modifier les variables d&#x27;environnement système »). On peut aussi passer par un gestionnaire de paquets : <strong><em>[scoop install kotlin]</em></strong> sous Windows (avec <a href="https://scoop.sh/">Scoop</a>), ou <a href="https://sdkman.io/">SDKMAN!</a> sous Linux et macOS (<strong><em>[sdk install kotlin 2.4.20]</em></strong>). Le compilateur a besoin d&#x27;un JDK, qu&#x27;il trouve par la variable <em>[JAVA_HOME]</em> ou le <em>[PATH]</em>.</p>
+<p>On vérifie l&#x27;installation dans un nouveau terminal :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>&gt; kotlinc -version
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>info: kotlinc-jvm 2.4.20 (JRE 25.0.4+7-LTS)
+</code></pre></div></td></tr></table></div>
+<p>La version du compilateur (2.4.20) est suivie de celle de la JVM qui l&#x27;exécute (le JDK 25).</p>
+<h3 id="222-les-commandes-du-compilateur">2.2.2. <span style="color: #1f4d78">Les commandes du compilateur</span></h3>
+<p>Le dossier <em>[bin]</em> contient deux commandes principales, <em>[kotlinc]</em> (le compilateur) et <em>[kotlinr]</em> (le lanceur, « runner ») :</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><b>Commande</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><b>Rôle</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><i><b>[kotlinc Fichier.kt -d classes]</b></i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">compile un ou plusieurs fichiers source et range les fichiers <i>[.class]</i> produits dans le dossier <i>[classes]</i></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><i><b>[kotlinc Fichier.kt -include-runtime -d prog.jar]</b></i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">compile et produit une archive <i>[.jar]</i> exécutable qui contient aussi la bibliothèque standard de Kotlin</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><i><b>[kotlinr -cp classes Classe]</b></i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">comme <i><b>[java -cp classes Classe]</b></i>, en ajoutant au chemin de classes la bibliothèque standard de Kotlin</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><i><b>[kotlinr script.main.kts]</b></i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">exécute un <b>script</b> Kotlin (fichier <i>[.main.kts]</i>), sans étape de compilation visible</div></td></tr></table>
+
+<p>Un script Kotlin est une suite d&#x27;instructions exécutées de haut en bas, sans fonction <em>[main]</em>. Par exemple, le script <em>[essai.main.kts]</em> suivant :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Kotlin "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">2.4</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="n">println</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="na">length</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>s&#x27;exécute ainsi :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>&gt; kotlinr essai.main.kts
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a>10
+</code></pre></div></td></tr></table></div>
+<p>Avant Kotlin 2.4.20, le lanceur s&#x27;appelait <em>[kotlin]</em> ; il a été renommé <em>[kotlinr]</em> dans Kotlin 2.4.20, pour éviter un conflit de nom avec une autre commande <em>[kotlin]</em>, celle de l&#x27;outil « Kotlin Toolchain ». L&#x27;ancien nom fonctionne encore dans la version 2.4.20 du compilateur (il n&#x27;est pas officiellement déprécié), mais la documentation de Kotlin recommande désormais <em>[kotlinr]</em>.</p>
+<p>Sans argument, la commande <em>[kotlinc]</em> lançait autrefois un interpréteur interactif (une « REPL », l&#x27;équivalent de <em>[jshell]</em>). Celui-ci est aujourd&#x27;hui abandonné :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>&gt; kotlinc
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>error: Kotlin REPL is deprecated and should be enabled explicitly for now; please use the '-Xrepl' option
+</code></pre></div></td></tr></table></div>
+<p>Pour essayer quelques lignes de Kotlin, on se sert plutôt d&#x27;un <strong>fichier brouillon</strong> d&#x27;IntelliJ IDEA (« File / New / Scratch File », langage Kotlin), dont les résultats s&#x27;affichent à côté de chaque ligne.</p>
+<h2 id="23-gradle">2.3. <span style="color: #2e74b5">Gradle</span></h2>
+<h3 id="231-le-role-de-gradle">2.3.1. <span style="color: #1f4d78">Le rôle de Gradle</span></h3>
+<p>Une application réelle utilise des <strong>bibliothèques</strong> qui ne font pas partie du JDK ni de la bibliothèque standard de Kotlin : un pilote de base de données, un cadriciel de tests, Hibernate, Spring, les coroutines… Elles sont distribuées sous forme d&#x27;archives <em>[.jar]</em> par un dépôt public, <strong>Maven Central</strong> (<a href="https://central.sonatype.com/">https://central.sonatype.com</a>). Un outil de construction lit dans la description d&#x27;un projet les bibliothèques dont il a besoin, les télécharge (avec les bibliothèques dont elles dépendent elles-mêmes), puis compile, teste et met en paquet le projet.</p>
+<p>Les deux grands outils de construction du monde Java sont <strong>Maven</strong> (utilisé par le cours Java dont ce document est l&#x27;adaptation) et <strong>Gradle</strong>. Kotlin peut être utilisé avec les deux, mais Gradle est l&#x27;outil de référence de l&#x27;écosystème Kotlin : c&#x27;est lui qu&#x27;utilisent Android et les projets Kotlin créés par IntelliJ IDEA, et ses fichiers de construction s&#x27;écrivent... en Kotlin. Ce document utilise <strong>Gradle 9.8</strong>.</p>
+<h3 id="232-le-wrapper-gradle-rien-a-installer">2.3.2. <span style="color: #1f4d78">Le wrapper Gradle : rien à installer</span></h3>
+<p>Il est inutile d&#x27;installer Gradle. Chaque projet de ce document est livré avec le <strong>wrapper</strong> Gradle (« enveloppe »), un petit lanceur formé de trois éléments placés à la racine du projet :</p>
+<ul>
+<li><em>[gradlew]</em> : le script de lancement pour Linux et macOS (<strong><em>[./gradlew]</em></strong>) ;</li>
+<li><em>[gradlew.bat]</em> : le même script pour Windows (<strong><em>[gradlew]</em></strong>) ;</li>
+<li>le dossier <em>[gradle/wrapper]</em>, qui contient le programme du lanceur (<em>[gradle-wrapper.jar]</em>) et sa configuration (<em>[gradle-wrapper.properties]</em>).</li>
+</ul>
+<p>Le fichier <em>[gradle-wrapper.properties]</em> indique la version de Gradle à utiliser :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="na">distributionUrl</span><span class="o">=</span><span class="s">https</span><span class="se">\:</span><span class="s">//services.gradle.org/distributions/gradle-9.8.0-bin.zip</span>
+</code></pre></div></td></tr></table></div>
+<p>À la première utilisation, <em>[gradlew]</em> télécharge cette version de Gradle et la conserve sur le poste ; les fois suivantes, il l&#x27;utilise directement. Chaque projet utilise ainsi la version de Gradle avec laquelle il a été écrit, quelle que soit celle éventuellement installée sur le poste. Gradle a seulement besoin d&#x27;un JDK pour s&#x27;exécuter, qu&#x27;il trouve par la variable <em>[JAVA_HOME]</em> ou le <em>[PATH]</em>.</p>
+<p>Dans ce document, les commandes sont écrites sous la forme Windows (<strong><em>[gradlew build]</em></strong>) ; sous Linux ou macOS, on écrit <strong><em>[./gradlew build]</em></strong>. Dans PowerShell, il faut aussi écrire <strong><em>[.\gradlew build]</em></strong>.</p>
+<p>Si l&#x27;on veut malgré tout disposer de la commande <em>[gradle]</em> (pour créer un projet avec <strong><em>[gradle init]</em></strong>, par exemple), on télécharge l&#x27;archive <em>[gradle-9.8.0-bin.zip]</em> sur <a href="https://gradle.org/releases/">https://gradle.org/releases</a>, on la décompresse et on ajoute son sous-dossier <em>[bin]</em> au <em>[PATH]</em> ; ou on utilise <strong><em>[scoop install gradle]</em></strong>, <strong><em>[sdk install gradle]</em></strong>. On vérifie alors l&#x27;installation :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-7-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-7-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-7-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-7-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-7-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-7-10">10</a></span>
+<span class="normal"><a href="#__codelineno-7-11">11</a></span>
+<span class="normal"><a href="#__codelineno-7-12">12</a></span>
+<span class="normal"><a href="#__codelineno-7-13">13</a></span>
+<span class="normal"><a href="#__codelineno-7-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>&gt; gradle --version
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a>------------------------------------------------------------
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a>Gradle 9.8.0
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a>------------------------------------------------------------
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a>Build time:    2026-09-24 13:40:00 UTC
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a>Revision:      a927be5e08efe79e0b87ada06c762dde6bb9f8b8
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a>
+<a id="__codelineno-7-9" name="__codelineno-7-9"></a>Kotlin:        2.4.10
+<a id="__codelineno-7-10" name="__codelineno-7-10"></a>Groovy:        4.0.33
+<a id="__codelineno-7-11" name="__codelineno-7-11"></a>Ant:           Apache Ant(TM) version 1.10.17 compiled on April 6 2026
+<a id="__codelineno-7-12" name="__codelineno-7-12"></a>Launcher JVM:  25.0.4 (Eclipse Adoptium 25.0.4+7-LTS)
+<a id="__codelineno-7-13" name="__codelineno-7-13"></a>Daemon JVM:    /home/claude/tools/jdk-25.0.4+7 (no Daemon JVM specified, using current Java home)
+<a id="__codelineno-7-14" name="__codelineno-7-14"></a>OS:            Linux 6.18.44-fc-v64 amd64
+</code></pre></div></td></tr></table></div>
+<p>Ces résultats ont été obtenus sous Linux. La ligne <em>[Kotlin:]</em> donne la version du Kotlin <strong>intégré à</strong> <strong>Gradle</strong>, qui sert à lire les fichiers de construction <em>[.gradle.kts]</em> : elle est indépendante de la version du compilateur Kotlin utilisée pour compiler nos programmes (2.4.20), qui est fixée par chaque projet. La ligne <em>[Launcher JVM]</em> donne le JDK qui exécute Gradle.</p>
+<h3 id="233-les-commandes-gradle">2.3.3. <span style="color: #1f4d78">Les commandes Gradle</span></h3>
+<p>La commande <em>[gradlew]</em> est suivie d&#x27;une ou plusieurs <strong>tâches</strong> (« tasks ») ; on la tape dans le dossier racine du projet, celui qui contient le fichier <em>[settings.gradle.kts]</em> :</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><b>Commande</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><b>Rôle</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><i><b>[gradlew build]</b></i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">compile les sources de <i>[src/main/kotlin]</i>, exécute les tests et crée l&#x27;archive <i>[.jar]</i> du projet dans <i>[build/libs]</i></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><i><b>[gradlew run]</b></i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">compile, puis exécute la classe principale du projet (plugin <i>[application]</i>)</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><i><b>[gradlew test]</b></i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">compile, puis exécute les tests unitaires de <i>[src/test/kotlin]</i> (chapitre 6)</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><i><b>[gradlew clean]</b></i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">supprime le dossier <i>[build]</i></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><i><b>[gradlew tasks]</b></i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">affiche la liste des tâches disponibles dans le projet</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><i><b>[gradlew installDist]</b></i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">crée dans <i>[build/install]</i> une version installable du programme : ses archives et des scripts de lancement</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><i><b>[gradlew bootRun]</b></i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">exécute une application Spring Boot (chapitre 13)</div></td></tr></table>
+
+<p>Les tâches dépendent les unes des autres : demander <em>[run]</em>, c&#x27;est demander aussi la compilation, et Gradle ne refait que ce qui a changé depuis la construction précédente. L&#x27;option <strong><em>[-q]</em></strong> (« quiet ») supprime les messages de Gradle et ne laisse que ceux du programme exécuté ; l&#x27;option <strong><em>[-Pnom=valeur]</em></strong> définit une <strong>propriété</strong> que le fichier de construction peut lire : nous l&#x27;utiliserons pour choisir le programme à exécuter. Les arguments du programme lancé par <em>[run]</em> se passent par l&#x27;option <strong><em>[--args=&quot;a b&quot;]</em></strong>.</p>
+<p>La première commande lancée dans un projet est lente : Gradle démarre un processus en arrière-plan (le « démon » Gradle), qui reste actif quelques heures pour accélérer les commandes suivantes, et télécharge ce dont le projet a besoin.</p>
+<h3 id="234-maven-central-et-le-cache-de-gradle">2.3.4. <span style="color: #1f4d78">Maven Central et le cache de Gradle</span></h3>
+<p>Les bibliothèques téléchargées par Gradle sont conservées sur le poste, dans le <strong>cache</strong> de Gradle, le dossier <em>[%USERPROFILE%\.gradle\caches]</em> (Linux, macOS : <em>[~/.gradle/caches]</em>). Elles ne sont téléchargées qu&#x27;une fois et servent ensuite à tous les projets. Il faut donc un accès à Internet lors de la première construction d&#x27;un projet. Le même dossier <em>[.gradle]</em> contient, dans <em>[wrapper/dists]</em>, les versions de Gradle téléchargées par le wrapper.</p>
+<p>Une bibliothèque est désignée par ses <strong>coordonnées</strong>, trois noms séparés par deux-points : le groupe (souvent un nom de domaine inversé comme <em>[org.hibernate.orm]</em>), le nom de la bibliothèque et sa version, par exemple <em>[tools.jackson.core:jackson-databind:3.1.5]</em>. Ce sont ces coordonnées que l&#x27;on écrit dans le fichier de construction d&#x27;un projet, et que l&#x27;on trouve en cherchant la bibliothèque sur le site de Maven Central.</p>
+<h3 id="235-la-syntaxe-kotlin-dsl">2.3.5. <span style="color: #1f4d78">La syntaxe Kotlin DSL</span></h3>
+<p>Le fichier de construction d&#x27;un projet s&#x27;appelle <em>[build.gradle.kts]</em>. L&#x27;extension <em>[.kts]</em> indique qu&#x27;il s&#x27;agit d&#x27;un <strong>script Kotlin</strong> : le fichier est écrit dans un langage dédié (« DSL », « Domain Specific Language ») construit avec la syntaxe de Kotlin. Gradle accepte aussi des fichiers <em>[build.gradle]</em> écrits en Groovy, que l&#x27;on rencontre dans les projets plus anciens ; depuis Gradle 8.2, le Kotlin DSL est le format par défaut. Voici un extrait typique :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<span class="normal"><a href="#__codelineno-8-2">2</a></span>
+<span class="normal"><a href="#__codelineno-8-3">3</a></span>
+<span class="normal"><a href="#__codelineno-8-4">4</a></span>
+<span class="normal"><a href="#__codelineno-8-5">5</a></span>
+<span class="normal"><a href="#__codelineno-8-6">6</a></span>
+<span class="normal"><a href="#__codelineno-8-7">7</a></span>
+<span class="normal"><a href="#__codelineno-8-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="n">plugins</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="w">    </span><span class="n">kotlin</span><span class="p">(</span><span class="s">"jvm"</span><span class="p">)</span><span class="w"> </span><span class="n">version</span><span class="w"> </span><span class="s">"2.4.20"</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="w">    </span><span class="n">application</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="p">}</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="n">dependencies</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="w">    </span><span class="n">implementation</span><span class="p">(</span><span class="s">"tools.jackson.core:jackson-databind:3.1.5"</span><span class="p">)</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>Sans connaître encore Kotlin, on peut lire ce texte comme une configuration :</p>
+<ul>
+<li>un nom suivi d&#x27;un bloc entre accolades (<strong><em>[plugins { ... }]</em></strong>, <strong><em>[dependencies { ... }]</em></strong>) est une <strong>section</strong> de la configuration. En Kotlin, c&#x27;est l&#x27;appel d&#x27;une fonction qui reçoit en paramètre un bloc de code (une <strong>lambda</strong>, chapitre 7) ;</li>
+<li><strong><em>[kotlin(&quot;jvm&quot;)]</em></strong>, <strong><em>[implementation(&quot;...&quot;)]</em></strong> sont des appels de fonctions ; les chaînes de caractères sont entre guillemets doubles ;</li>
+<li><strong><em>[version = &quot;1.0&quot;]</em></strong> affecte une valeur à une propriété du projet.</li>
+</ul>
+<p>Un avantage de ce format est qu&#x27;IntelliJ IDEA le comprend comme du code Kotlin : il propose la complétion et signale les erreurs pendant la frappe.</p>
+<h2 id="24-lediteur">2.4. <span style="color: #2e74b5">L&#x27;éditeur</span></h2>
+<h3 id="241-intellij-idea">2.4.1. <span style="color: #1f4d78">IntelliJ IDEA</span></h3>
+<p><a href="https://www.jetbrains.com/idea/">IntelliJ IDEA</a>, de la société JetBrains, est l&#x27;IDE recommandé pour ce document. JetBrains est aussi l&#x27;entreprise qui a conçu Kotlin (la première version stable du langage date de 2016) et qui continue de le développer : la prise en charge de Kotlin est intégrée à IntelliJ IDEA, sans extension à ajouter, et c&#x27;est celle qui suit au plus près les évolutions du langage. Ses fonctions de base, qui suffisent largement pour ce document, sont gratuites.</p>
+<p>IntelliJ IDEA reconnaît les projets Gradle : « File / Open », puis on choisit le dossier qui contient le fichier <em>[settings.gradle.kts]</em> ; IntelliJ lance Gradle pour lire le projet (on peut suivre l&#x27;opération dans la fenêtre « Build »), télécharge les bibliothèques, puis affiche une vue « Gradle » qui donne accès à toutes les tâches du projet. Il permet ensuite d&#x27;exécuter un programme par le <strong>triangle vert</strong> placé dans la marge à côté de sa fonction <em>[main]</em> (<em>[Ctrl-Maj-F10]</em>), ou un test par le même triangle à côté de la fonction de test. On indique le JDK à utiliser dans « File / Project Structure / SDK » ; pour un projet Gradle, c&#x27;est en principe la déclaration <strong><em>[jvmToolchain(25)]</em></strong> du projet (voir plus loin) qui désigne le JDK de compilation.</p>
+<p>IntelliJ IDEA offre aussi des aides propres à Kotlin : conversion automatique d&#x27;un fichier Java en Kotlin (« Code / Convert Java File to Kotlin File », ou simplement en collant du code Java dans un fichier Kotlin), affichage du bytecode produit par le compilateur (« Tools / Kotlin / Show Kotlin Bytecode »), et les fichiers brouillons déjà cités.</p>
+<h3 id="242-vs-code">2.4.2. <span style="color: #1f4d78">VS Code</span></h3>
+<p><a href="https://code.visualstudio.com/">VS Code</a> est un éditeur gratuit et multiplateforme. Pour programmer en Kotlin, on lui ajoute l&#x27;extension <strong>Kotlin</strong> publiée par JetBrains (menu « Extensions », rechercher « Kotlin » et choisir celle dont l&#x27;éditeur est JetBrains). Cette extension officielle est <strong>récente</strong> : elle s&#x27;appuie sur le même moteur d&#x27;analyse du code qu&#x27;IntelliJ IDEA et sait importer les projets Gradle, mais elle n&#x27;offre pas encore tout le confort de l&#x27;IDE de JetBrains, et ses fonctions évoluent d&#x27;une version à l&#x27;autre. On consultera la page de l&#x27;extension pour savoir ce qu&#x27;elle prend en charge au moment où on l&#x27;installe. Pour ce document, elle convient pour lire et modifier les programmes ; on peut toujours les exécuter depuis le terminal intégré (« Terminal / New Terminal ») avec les commandes <em>[gradlew]</em> données dans le texte.</p>
+<p>On ouvre dans VS Code le <strong>dossier</strong> d&#x27;un chapitre (« File / Open Folder »), par exemple le dossier <em>[kotlin-oct-2026/03-bases]</em>.</p>
+<h3 id="243-android-studio">2.4.3. <span style="color: #1f4d78">Android Studio</span></h3>
+<p>Kotlin est aussi le langage recommandé par Google pour les applications Android. L&#x27;IDE <strong>Android Studio</strong>, construit sur IntelliJ IDEA, est réservé à ce type d&#x27;applications, dont ce document ne traite pas.</p>
+<p>Dans la suite du document, les opérations sont décrites avec les commandes <em>[java]</em>, <em>[kotlinc]</em> et <em>[gradlew]</em>, qui donnent les mêmes résultats quel que soit l&#x27;éditeur.</p>
+<h2 id="25-un-premier-programme-le-fichier-hellokt">2.5. <span style="color: #2e74b5">Un premier programme : le fichier Hello.kt</span></h2>
+<h3 id="251-le-programme">2.5.1. <span style="color: #1f4d78">Le programme</span></h3>
+<p>Un programme Kotlin peut être un simple fichier contenant une fonction <em>[main]</em>, sans déclaration de classe. Créons le fichier <em>[Hello.kt]</em> suivant (dossier <em>[02-installation]</em> des exemples) :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
+<span class="normal"><a href="#__codelineno-9-2">2</a></span>
+<span class="normal"><a href="#__codelineno-9-3">3</a></span>
+<span class="normal"><a href="#__codelineno-9-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="c1">// premier programme Kotlin : une fonction main de haut niveau</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"1er essai avec Kotlin 2.4"</span><span class="p">)</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>Commentaires :</p>
+<ul>
+<li>ligne 1 : un commentaire. Tout ce qui suit <em>[//]</em> jusqu&#x27;à la fin de la ligne est ignoré par le compilateur ;</li>
+<li>ligne 2 : la fonction <em>[main]</em>, point d&#x27;entrée du programme. Le mot clé <em>[fun]</em> introduit une fonction. Elle est déclarée <strong>au niveau du fichier</strong> (« top-level function »), en dehors de toute classe ; elle n&#x27;a pas besoin d&#x27;être déclarée <em>[public]</em> (c&#x27;est la visibilité par défaut en Kotlin) ni de recevoir les arguments du programme ;</li>
+<li>ligne 3 : la seule instruction du programme : elle écrit une ligne de texte à l&#x27;écran. La fonction <em>[println]</em> (et <em>[print]</em>, qui ne passe pas à la ligne) fait partie de la bibliothèque standard de Kotlin ; c&#x27;est l&#x27;équivalent de <strong><em>[System.out.println]</em></strong> en Java. On remarquera l&#x27;absence de point-virgule à la fin de l&#x27;instruction : il est facultatif en Kotlin et on ne l&#x27;écrit pas.</li>
+</ul>
+<p>Le programme est un peu plus simple que son équivalent dans le cours Java (<strong><em>[void main() { IO.println(...); }]</em></strong>), mais la vraie différence est ailleurs : la fonction <em>[main]</em> de haut niveau existe en Kotlin depuis sa première version, alors que Java ne l&#x27;accepte que depuis Java 25.</p>
+<h3 id="252-compilation-et-execution">2.5.2. <span style="color: #1f4d78">Compilation et exécution</span></h3>
+<p>On compile le programme avec <em>[kotlinc]</em>, en demandant une archive <em>[.jar]</em> exécutable, puis on l&#x27;exécute avec la commande <em>[java]</em> du JDK :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
+<span class="normal"><a href="#__codelineno-10-2">2</a></span>
+<span class="normal"><a href="#__codelineno-10-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a>&gt; kotlinc Hello.kt -include-runtime -d hello.jar
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a>&gt; java -jar hello.jar
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a>1er essai avec Kotlin 2.4
+</code></pre></div></td></tr></table></div>
+<ul>
+<li><strong><em>[-d hello.jar]</em></strong> : la destination de la compilation. Si elle se termine par <em>[.jar]</em>, le compilateur produit une archive ; sinon, c&#x27;est un dossier dans lequel il range les fichiers <em>[.class]</em> ;</li>
+<li><strong><em>[-include-runtime]</em></strong> : l&#x27;archive contient aussi la <strong>bibliothèque standard de Kotlin</strong> (<em>[kotlin-stdlib]</em>), dont les programmes Kotlin ont besoin à l&#x27;exécution, et un manifeste qui désigne la classe principale. Le programme peut ainsi être exécuté par <strong><em>[java -jar]</em></strong> sur n&#x27;importe quel poste muni d&#x27;un JDK (ou d&#x27;un JRE), sans que Kotlin y soit installé. L&#x27;archive pèse en contrepartie plus de 5 Mo, essentiellement la bibliothèque standard ;</li>
+<li>la compilation prend quelques secondes : le compilateur Kotlin, lui-même un programme Java, doit d&#x27;abord démarrer. Gradle et IntelliJ IDEA évitent ce coût en gardant un compilateur actif entre deux compilations.</li>
+</ul>
+<p>Il n&#x27;existe pas en Kotlin d&#x27;équivalent de la commande <strong><em>[java Hello.java]</em></strong> de Java, qui compile et exécute en une seule étape un fichier source ; le plus proche est le script <em>[.main.kts]</em> présenté plus haut.</p>
+<h3 id="253-ce-que-produit-le-compilateur">2.5.3. <span style="color: #1f4d78">Ce que produit le compilateur</span></h3>
+<p>La machine virtuelle Java ne connaît que des classes : une fonction ne peut pas exister en dehors d&#x27;une classe. Le compilateur Kotlin <strong>enveloppe</strong> donc les fonctions de haut niveau d&#x27;un fichier dans une classe qu&#x27;il génère, et qu&#x27;il nomme d&#x27;après le fichier : le nom du fichier, suivi de <em>[Kt]</em>. Pour <em>[Hello.kt]</em>, la classe générée est <em>[HelloKt]</em>. La commande <em>[javap]</em> du JDK affiche ses membres :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
+<span class="normal"><a href="#__codelineno-11-2">2</a></span>
+<span class="normal"><a href="#__codelineno-11-3">3</a></span>
+<span class="normal"><a href="#__codelineno-11-4">4</a></span>
+<span class="normal"><a href="#__codelineno-11-5">5</a></span>
+<span class="normal"><a href="#__codelineno-11-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="o">&gt;</span><span class="w"> </span><span class="n">javap</span><span class="w"> </span><span class="o">-</span><span class="n">cp</span><span class="w"> </span><span class="n">hello</span><span class="p">.</span><span class="na">jar</span><span class="w"> </span><span class="n">HelloKt</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="n">Compiled</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="s">"Hello.kt"</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kd">class</span> <span class="nc">HelloKt</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">();</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">java</span><span class="p">.</span><span class="na">lang</span><span class="p">.</span><span class="na">String</span><span class="o">[]</span><span class="p">);</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>la classe <em>[HelloKt]</em> est <em>[public final]</em> ;</li>
+<li>elle contient notre fonction <em>[main]</em>, devenue une méthode statique sans paramètre ;</li>
+<li>et une seconde méthode <strong><em>[main(String[])]</em></strong>, ajoutée par le compilateur : c&#x27;est la méthode <strong><em>[public static void main(String[] args)]</em></strong> que la machine virtuelle sait lancer. Elle se contente d&#x27;appeler la première. Nous reviendrons sur ce mécanisme au chapitre 3.</li>
+</ul>
+<p>C&#x27;est ce nom de classe qui désigne le programme à exécuter : le manifeste de <em>[hello.jar]</em> contient la ligne <strong><em>[Main-Class: HelloKt]</em></strong>, et l&#x27;on peut aussi écrire <strong><em>[java -cp hello.jar HelloKt]</em></strong>.</p>
+<p>Contrairement à Java, le <strong>nom du fichier</strong> n&#x27;est pas contraint : il n&#x27;a pas à être un identifiant valide ni à correspondre au nom d&#x27;une classe qu&#x27;il contient. Un fichier <em>[premier-essai.kt]</em> est accepté, et sa classe générée s&#x27;appelle <em>[Premier_essaiKt]</em> (le compilateur met une majuscule à la première lettre et remplace les caractères interdits dans un identifiant par <em>[_]</em>). Par convention, on donne néanmoins aux fichiers des noms commençant par une majuscule, sans tiret, comme <em>[Hello.kt]</em> ou <em>[Bases01.kt]</em>.</p>
+<p>Sous Windows, les caractères accentués écrits par <em>[println]</em> s&#x27;affichent correctement dans le terminal : la machine virtuelle convertit le texte dans l&#x27;encodage du terminal. Les fichiers source doivent être enregistrés en UTF-8, l&#x27;encodage par défaut de VS Code et d&#x27;IntelliJ IDEA, et celui que le compilateur Kotlin suppose toujours. Il en va autrement lorsque le programme est lancé par Gradle (<strong><em>[gradlew run]</em></strong>, ou le triangle vert d&#x27;IntelliJ IDEA dans un projet Gradle) : sa sortie n&#x27;est plus une console mais un tube vers Gradle, et la machine virtuelle l&#x27;encode alors dans l&#x27;encodage historique de Windows (windows-1252), si bien qu&#x27;IntelliJ IDEA, qui attend de l&#x27;UTF-8, affiche un caractère de remplacement (un losange contenant un point d&#x27;interrogation) à la place de chaque caractère accentué. Les projets du cours règlent ce point dans leur fichier <em>[build.gradle.kts]</em> (section suivante). Pour le terminal intégré d&#x27;IntelliJ IDEA (PowerShell), on peut de même passer la console en UTF-8 en tapant <strong><em>[chcp 65001]</em></strong> au début de la session, ou une fois pour toutes en indiquant comme interpréteur, dans « File / Settings / Tools / Terminal / Shell path » : <strong><em>[powershell.exe -NoExit -Command &quot;[Console]::OutputEncoding = [Text.Encoding]::UTF8&quot;]</em></strong>.</p>
+<p>La commande <em>[kotlinc]</em> convient aux programmes d&#x27;un seul fichier qui n&#x27;utilisent que la bibliothèque standard. Dès qu&#x27;un programme a besoin d&#x27;une bibliothèque extérieure, il faudrait la télécharger, avec les bibliothèques dont elle dépend, et la passer au compilateur puis à la machine virtuelle : on écrit alors un projet Gradle. C&#x27;est ce que nous ferons pour tous les exemples du document.</p>
+<h2 id="26-un-projet-gradle">2.6. <span style="color: #2e74b5">Un projet Gradle</span></h2>
+<h3 id="261-structure-du-projet">2.6.1. <span style="color: #1f4d78">Structure du projet</span></h3>
+<p>Un <strong>projet Gradle</strong> est un dossier contenant un fichier de construction <em>[build.gradle.kts]</em> et des fichiers source rangés selon une arborescence standard. La racine d&#x27;une construction Gradle contient en plus un fichier <em>[settings.gradle.kts]</em>, qui donne son nom à la construction et la liste des projets qu&#x27;elle regroupe, et le wrapper. Le dossier <em>[02-installation]</em> des exemples est une construction qui regroupe deux projets, <em>[PremierProgramme]</em> et <em>[DeuxMains]</em> :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-12-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-12-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-12-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-12-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-12-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-12-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-12-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-12-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-12-10">10</a></span>
+<span class="normal"><a href="#__codelineno-12-11">11</a></span>
+<span class="normal"><a href="#__codelineno-12-12">12</a></span>
+<span class="normal"><a href="#__codelineno-12-13">13</a></span>
+<span class="normal"><a href="#__codelineno-12-14">14</a></span>
+<span class="normal"><a href="#__codelineno-12-15">15</a></span>
+<span class="normal"><a href="#__codelineno-12-16">16</a></span>
+<span class="normal"><a href="#__codelineno-12-17">17</a></span>
+<span class="normal"><a href="#__codelineno-12-18">18</a></span>
+<span class="normal"><a href="#__codelineno-12-19">19</a></span>
+<span class="normal"><a href="#__codelineno-12-20">20</a></span>
+<span class="normal"><a href="#__codelineno-12-21">21</a></span>
+<span class="normal"><a href="#__codelineno-12-22">22</a></span>
+<span class="normal"><a href="#__codelineno-12-23">23</a></span>
+<span class="normal"><a href="#__codelineno-12-24">24</a></span>
+<span class="normal"><a href="#__codelineno-12-25">25</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a>02-installation/
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a>├── gradlew
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a>├── gradlew.bat
+<a id="__codelineno-12-4" name="__codelineno-12-4"></a>├── gradle/
+<a id="__codelineno-12-5" name="__codelineno-12-5"></a>│   └── wrapper/
+<a id="__codelineno-12-6" name="__codelineno-12-6"></a>│       ├── gradle-wrapper.jar
+<a id="__codelineno-12-7" name="__codelineno-12-7"></a>│       └── gradle-wrapper.properties
+<a id="__codelineno-12-8" name="__codelineno-12-8"></a>├── settings.gradle.kts
+<a id="__codelineno-12-9" name="__codelineno-12-9"></a>├── build.gradle.kts
+<a id="__codelineno-12-10" name="__codelineno-12-10"></a>├── Hello.kt
+<a id="__codelineno-12-11" name="__codelineno-12-11"></a>├── PremierProgramme/
+<a id="__codelineno-12-12" name="__codelineno-12-12"></a>│   ├── build.gradle.kts
+<a id="__codelineno-12-13" name="__codelineno-12-13"></a>│   └── src/
+<a id="__codelineno-12-14" name="__codelineno-12-14"></a>│       └── main/
+<a id="__codelineno-12-15" name="__codelineno-12-15"></a>│           └── kotlin/
+<a id="__codelineno-12-16" name="__codelineno-12-16"></a>│               └── premier/
+<a id="__codelineno-12-17" name="__codelineno-12-17"></a>│                   └── Main.kt
+<a id="__codelineno-12-18" name="__codelineno-12-18"></a>└── DeuxMains/
+<a id="__codelineno-12-19" name="__codelineno-12-19"></a>    ├── build.gradle.kts
+<a id="__codelineno-12-20" name="__codelineno-12-20"></a>    └── src/
+<a id="__codelineno-12-21" name="__codelineno-12-21"></a>        └── main/
+<a id="__codelineno-12-22" name="__codelineno-12-22"></a>            └── kotlin/
+<a id="__codelineno-12-23" name="__codelineno-12-23"></a>                └── deuxmains/
+<a id="__codelineno-12-24" name="__codelineno-12-24"></a>                    ├── P1.kt
+<a id="__codelineno-12-25" name="__codelineno-12-25"></a>                    └── P2.kt
+</code></pre></div></td></tr></table></div>
+<ul>
+<li><em>[src/main/kotlin]</em> contient les fichiers source du programme ; <em>[src/main/resources]</em> contiendrait les fichiers de données ou de configuration à placer à côté des classes compilées ; <em>[src/test/kotlin]</em> contiendrait les tests (chapitre 6) ;</li>
+<li>sous <em>[src/main/kotlin]</em>, l&#x27;arborescence des dossiers suit celle des <strong>paquetages</strong> (chapitre 4) : le fichier <em>[Main.kt]</em> du paquetage <em>[premier]</em> est dans le dossier <em>[premier]</em>. Kotlin n&#x27;impose pas cette correspondance, contrairement à Java, mais la recommande, et nous la respecterons toujours ;</li>
+<li>le fichier <em>[Hello.kt]</em> n&#x27;appartient à aucun projet : il est placé là pour être compilé par <em>[kotlinc]</em>, et Gradle l&#x27;ignore.</li>
+</ul>
+<p>Un projet isolé (non regroupé avec d&#x27;autres) a la même structure, avec ses propres fichiers <em>[settings.gradle.kts]</em> et wrapper : c&#x27;est le cas du projet du chapitre 3. On peut créer cette arborescence à la main, ou laisser l&#x27;IDE la créer (IntelliJ : « File / New / Project », choisir « Kotlin » comme langage et « Gradle » comme système de construction, avec le Kotlin DSL).</p>
+<p>Nous verrons à la section suivante les fichiers de la racine. Le fichier <em>[build.gradle.kts]</em> du projet <em>[PremierProgramme]</em> est le suivant :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-13-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-13-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-13-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-13-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-13-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-13-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-13-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-13-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-13-10">10</a></span>
+<span class="normal"><a href="#__codelineno-13-11">11</a></span>
+<span class="normal"><a href="#__codelineno-13-12">12</a></span>
+<span class="normal"><a href="#__codelineno-13-13">13</a></span>
+<span class="normal"><a href="#__codelineno-13-14">14</a></span>
+<span class="normal"><a href="#__codelineno-13-15">15</a></span>
+<span class="normal"><a href="#__codelineno-13-16">16</a></span>
+<span class="normal"><a href="#__codelineno-13-17">17</a></span>
+<span class="normal"><a href="#__codelineno-13-18">18</a></span>
+<span class="normal"><a href="#__codelineno-13-19">19</a></span>
+<span class="normal"><a href="#__codelineno-13-20">20</a></span>
+<span class="normal"><a href="#__codelineno-13-21">21</a></span>
+<span class="normal"><a href="#__codelineno-13-22">22</a></span>
+<span class="normal"><a href="#__codelineno-13-23">23</a></span>
+<span class="normal"><a href="#__codelineno-13-24">24</a></span>
+<span class="normal"><a href="#__codelineno-13-25">25</a></span>
+<span class="normal"><a href="#__codelineno-13-26">26</a></span>
+<span class="normal"><a href="#__codelineno-13-27">27</a></span>
+<span class="normal"><a href="#__codelineno-13-28">28</a></span>
+<span class="normal"><a href="#__codelineno-13-29">29</a></span>
+<span class="normal"><a href="#__codelineno-13-30">30</a></span>
+<span class="normal"><a href="#__codelineno-13-31">31</a></span>
+<span class="normal"><a href="#__codelineno-13-32">32</a></span>
+<span class="normal"><a href="#__codelineno-13-33">33</a></span>
+<span class="normal"><a href="#__codelineno-13-34">34</a></span>
+<span class="normal"><a href="#__codelineno-13-35">35</a></span>
+<span class="normal"><a href="#__codelineno-13-36">36</a></span>
+<span class="normal"><a href="#__codelineno-13-37">37</a></span>
+<span class="normal"><a href="#__codelineno-13-38">38</a></span>
+<span class="normal"><a href="#__codelineno-13-39">39</a></span>
+<span class="normal"><a href="#__codelineno-13-40">40</a></span>
+<span class="normal"><a href="#__codelineno-13-41">41</a></span>
+<span class="normal"><a href="#__codelineno-13-42">42</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="c1">// le projet [PremierProgramme] : un programme Kotlin exécuté par la JVM</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="n">plugins</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="w">    </span><span class="c1">// le plugin Kotlin pour la JVM (sa version est déclarée dans le projet racine)</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="w">    </span><span class="n">kotlin</span><span class="p">(</span><span class="s">"jvm"</span><span class="p">)</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5"></a><span class="w">    </span><span class="c1">// le plugin [application] : tâches run et installDist</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6"></a><span class="w">    </span><span class="n">application</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7"></a><span class="p">}</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8"></a>
+<a id="__codelineno-13-9" name="__codelineno-13-9"></a><span class="c1">// les coordonnées du projet</span>
+<a id="__codelineno-13-10" name="__codelineno-13-10"></a><span class="n">group</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"exemples.installation"</span>
+<a id="__codelineno-13-11" name="__codelineno-13-11"></a><span class="n">version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"1.0"</span>
+<a id="__codelineno-13-12" name="__codelineno-13-12"></a>
+<a id="__codelineno-13-13" name="__codelineno-13-13"></a><span class="c1">// le dépôt où sont cherchées les bibliothèques</span>
+<a id="__codelineno-13-14" name="__codelineno-13-14"></a><span class="n">repositories</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-15" name="__codelineno-13-15"></a><span class="w">    </span><span class="n">mavenCentral</span><span class="p">()</span>
+<a id="__codelineno-13-16" name="__codelineno-13-16"></a><span class="p">}</span>
+<a id="__codelineno-13-17" name="__codelineno-13-17"></a>
+<a id="__codelineno-13-18" name="__codelineno-13-18"></a><span class="n">dependencies</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-19" name="__codelineno-13-19"></a><span class="w">    </span><span class="c1">// aucune bibliothèque en dehors de la bibliothèque standard de Kotlin, ajoutée par le plugin</span>
+<a id="__codelineno-13-20" name="__codelineno-13-20"></a><span class="p">}</span>
+<a id="__codelineno-13-21" name="__codelineno-13-21"></a>
+<a id="__codelineno-13-22" name="__codelineno-13-22"></a><span class="n">kotlin</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-23" name="__codelineno-13-23"></a><span class="w">    </span><span class="c1">// le code est compilé et exécuté avec le JDK 25</span>
+<a id="__codelineno-13-24" name="__codelineno-13-24"></a><span class="w">    </span><span class="n">jvmToolchain</span><span class="p">(</span><span class="m">25</span><span class="p">)</span>
+<a id="__codelineno-13-25" name="__codelineno-13-25"></a><span class="w">    </span><span class="n">compilerOptions</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-26" name="__codelineno-13-26"></a><span class="w">        </span><span class="c1">// un avertissement du compilateur est traité comme une erreur</span>
+<a id="__codelineno-13-27" name="__codelineno-13-27"></a><span class="w">        </span><span class="n">allWarningsAsErrors</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
+<a id="__codelineno-13-28" name="__codelineno-13-28"></a><span class="w">        </span><span class="c1">// les noms des paramètres des fonctions sont conservés dans le bytecode</span>
+<a id="__codelineno-13-29" name="__codelineno-13-29"></a><span class="w">        </span><span class="n">javaParameters</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
+<a id="__codelineno-13-30" name="__codelineno-13-30"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-13-31" name="__codelineno-13-31"></a><span class="p">}</span>
+<a id="__codelineno-13-32" name="__codelineno-13-32"></a>
+<a id="__codelineno-13-33" name="__codelineno-13-33"></a><span class="n">application</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-34" name="__codelineno-13-34"></a><span class="w">    </span><span class="c1">// la classe qui contient la fonction main exécutée par [gradlew run]</span>
+<a id="__codelineno-13-35" name="__codelineno-13-35"></a><span class="w">    </span><span class="n">mainClass</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"premier.MainKt"</span>
+<a id="__codelineno-13-36" name="__codelineno-13-36"></a><span class="p">}</span>
+<a id="__codelineno-13-37" name="__codelineno-13-37"></a>
+<a id="__codelineno-13-38" name="__codelineno-13-38"></a><span class="c1">// sous Windows, les sorties écran du programme lancé par Gradle (run, bootRun...) sont encodées en UTF-8,</span>
+<a id="__codelineno-13-39" name="__codelineno-13-39"></a><span class="c1">// sinon les caractères accentués sont abîmés dans la console d'IntelliJ IDEA ou le terminal</span>
+<a id="__codelineno-13-40" name="__codelineno-13-40"></a><span class="n">tasks</span><span class="p">.</span><span class="na">withType</span><span class="o">&lt;</span><span class="n">JavaExec</span><span class="o">&gt;</span><span class="p">().</span><span class="na">configureEach</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-41" name="__codelineno-13-41"></a><span class="w">    </span><span class="n">jvmArgs</span><span class="p">(</span><span class="s">"-Dstdout.encoding=UTF-8"</span><span class="p">,</span><span class="w"> </span><span class="s">"-Dstderr.encoding=UTF-8"</span><span class="p">)</span>
+<a id="__codelineno-13-42" name="__codelineno-13-42"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>Commentaires :</p>
+<ul>
+<li>ligne 1 : un commentaire. Le fichier de construction est du Kotlin : les commentaires s&#x27;y écrivent comme dans un programme ;</li>
+<li>lignes 2-7 : les <strong>plugins</strong> (« greffons ») appliqués au projet. Ce sont eux qui donnent à Gradle les tâches dont nous avons besoin :<ul>
+<li>ligne 4 : le plugin Kotlin pour la JVM. Il ajoute les tâches qui compilent les fichiers de <em>[src/main/kotlin]</em> et ajoute automatiquement la bibliothèque standard de Kotlin aux dépendances du projet. La notation <strong><em>[kotlin(&quot;jvm&quot;)]</em></strong> est un raccourci pour l&#x27;identifiant complet du plugin, <em>[org.jetbrains.kotlin.jvm]</em>. Sa version n&#x27;est pas indiquée ici, parce que le projet fait partie d&#x27;une construction de plusieurs projets dont la racine fixe cette version pour tous (section suivante). Dans un projet isolé, on écrit <strong><em>[kotlin(&quot;jvm&quot;) version &quot;2.4.20&quot;]</em></strong> : c&#x27;est cette version qui détermine la version du compilateur Kotlin utilisé ;</li>
+<li>ligne 6 : le plugin <em>[application]</em>, qui ajoute les tâches <em>[run]</em> (exécuter le programme) et <em>[installDist]</em> (préparer une version installable) ;</li>
+</ul>
+</li>
+<li>lignes 10-11 : les <strong>coordonnées</strong> du projet, groupe et version, qui l&#x27;identifient avec son nom (<em>[PremierProgramme]</em>, le nom de son dossier). Ce sont aussi les coordonnées par lesquelles un autre projet pourrait désigner celui-ci, comme on désigne une bibliothèque de Maven Central (chapitre 6) ;</li>
+<li>lignes 14-15 : le dépôt dans lequel Gradle cherche les bibliothèques du projet, ici Maven Central ;</li>
+<li>lignes 18-20 : les bibliothèques utilisées par le projet. Ce projet n&#x27;en utilise aucune, en dehors de la bibliothèque standard de Kotlin que le plugin Kotlin ajoute de lui-même ;</li>
+<li>ligne 24 : la <strong>chaîne d&#x27;outils</strong> (« toolchain ») du projet : le code est compilé pour Java 25 et exécuté par <strong><em>[gradlew run]</em></strong> avec un JDK 25, même si Gradle lui-même est exécuté par un autre JDK. Gradle cherche ce JDK parmi ceux qui sont installés sur le poste. S&#x27;il n&#x27;en trouve aucun, il échoue avec le message <strong><em>[Cannot find a Java installation on your machine ...</em></strong> <strong><em>matching: {languageVersion=25 ...}]</em></strong>, sauf si la construction déclare le plugin <em>[foojay-resolver-convention]</em>, ce que font tous les projets du cours (section suivante) : Gradle télécharge alors lui-même un JDK 25. Dans IntelliJ IDEA, on peut aussi installer ce JDK par « File / Project Structure / SDK / Add SDK / Download JDK » ;</li>
+<li>ligne 27 : un avertissement du compilateur est traité comme une erreur et arrête la compilation. Le compilateur Kotlin signale beaucoup de maladresses (variable inutilisée, transtypage inutile, opérateur <strong><em>[!!]</em></strong> superflu…) : nous voulons des programmes qui n&#x27;en produisent aucune ;</li>
+<li>ligne 29 : le compilateur conserve dans le bytecode les noms des paramètres des fonctions. Certaines bibliothèques s&#x27;en servent, par exemple Jackson pour créer un objet à partir d&#x27;un document JSON (chapitre 5) ou Spring (chapitre 13) ;</li>
+<li>lignes 33-35 : la classe dont la fonction <em>[main]</em> est exécutée par <strong><em>[gradlew run]</em></strong>. Le nom est celui de la classe générée par le compilateur pour le fichier <em>[Main.kt]</em> du paquetage <em>[premier]</em> : <em>[premier.MainKt]</em> ;</li>
+<li>lignes 38-41 : toutes les tâches qui exécutent un programme Java (<em>[JavaExec]</em>), comme <em>[run]</em>, reçoivent deux options de la machine virtuelle : les sorties écran du programme (<strong><em>[System.out]</em></strong>, <strong><em>[System.err]</em></strong>) sont encodées en UTF-8. Sans elles, les caractères accentués écrits par le programme seraient abîmés dans la console d&#x27;IntelliJ IDEA sous Windows (voir la remarque sur les accents, plus haut). <strong><em>[tasks.withType&lt;JavaExec&gt;()]</em></strong> désigne toutes les tâches de ce type, et <strong><em>[configureEach { … }]</em></strong> règle chacune d&#x27;elles. Tous les projets du cours qui exécutent un programme contiennent ce réglage.</li>
+</ul>
+<p>Ce projet n&#x27;utilise aucune bibliothèque. Un projet qui en utilise une la déclare dans la section <strong><em>[dependencies]</em></strong> par ses coordonnées, comme nous le ferons à partir du chapitre 5 :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
+<span class="normal"><a href="#__codelineno-14-2">2</a></span>
+<span class="normal"><a href="#__codelineno-14-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="n">dependencies</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="w">    </span><span class="n">implementation</span><span class="p">(</span><span class="s">"tools.jackson.core:jackson-databind:3.1.5"</span><span class="p">)</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>Le mot <em>[implementation]</em> indique que la bibliothèque est nécessaire pour compiler et pour exécuter le programme. On rencontrera aussi <em>[runtimeOnly]</em> (nécessaire seulement à l&#x27;exécution, comme un pilote de base de données) et <em>[testImplementation]</em> (nécessaire seulement aux tests). Gradle téléchargera alors <em>[jackson-databind]</em> et les bibliothèques dont elle dépend.</p>
+<p>Le fichier <em>[Main.kt]</em> contient le programme :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span>
+<span class="normal"><a href="#__codelineno-15-2">2</a></span>
+<span class="normal"><a href="#__codelineno-15-3">3</a></span>
+<span class="normal"><a href="#__codelineno-15-4">4</a></span>
+<span class="normal"><a href="#__codelineno-15-5">5</a></span>
+<span class="normal"><a href="#__codelineno-15-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="k">package</span><span class="w"> </span><span class="nn">premier</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2"></a>
+<a id="__codelineno-15-3" name="__codelineno-15-3"></a><span class="c1">// le programme principal du projet [PremierProgramme]</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"1er essai avec un projet Gradle / Kotlin 2.4"</span><span class="p">)</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>ligne 1 : le fichier appartient au paquetage <em>[premier]</em>. Le nom complet de la classe générée pour ce fichier est donc <em>[premier.MainKt]</em> ;</li>
+<li>lignes 4-6 : la fonction <em>[main]</em>, sous la même forme que dans <em>[Hello.kt]</em>. Un fichier Kotlin peut contenir un nombre quelconque de fonctions et de classes, publiques ou non : le nom du fichier ne dépend pas de son contenu.</li>
+</ul>
+<h3 id="262-compilation-et-execution">2.6.2. <span style="color: #1f4d78">Compilation et exécution</span></h3>
+<p>La commande <strong><em>[gradlew build]</em></strong>, tapée dans le dossier <em>[02-installation]</em>, compile les projets de la construction (et exécuterait leurs tests s&#x27;ils en avaient) : Gradle télécharge si nécessaire le plugin Kotlin, le compilateur et la bibliothèque standard, puis compile les fichiers de <em>[src/main/kotlin]</em> et range les classes produites dans le dossier <em>[build/classes/kotlin/main]</em> de chaque projet, en respectant l&#x27;arborescence des paquetages (<em>[PremierProgramme/build/classes/kotlin/main/premier/MainKt.class]</em>).</p>
+<p>La commande <strong><em>[gradlew run]</em></strong> compile un projet puis l&#x27;exécute. Dans une construction de plusieurs projets, on désigne le projet par son chemin, précédé de deux-points : <strong><em>[:PremierProgramme:run]</em></strong> est la tâche <em>[run]</em> du projet <em>[PremierProgramme]</em>. Avec l&#x27;option <strong><em>[-q]</em></strong>, on ne voit plus que l&#x27;affichage du programme :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span>
+<span class="normal"><a href="#__codelineno-16-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a>&gt; gradlew -q :PremierProgramme:run
+<a id="__codelineno-16-2" name="__codelineno-16-2"></a>1er essai avec un projet Gradle / Kotlin 2.4
+</code></pre></div></td></tr></table></div>
+<p>On peut aussi se placer dans le dossier du projet et taper <strong><em>[..\gradlew -q run]</em></strong> : Gradle remonte jusqu&#x27;au fichier <em>[settings.gradle.kts]</em> de la racine et exécute la tâche <em>[run]</em> du projet du dossier courant. En revanche, <strong><em>[gradlew run]</em></strong> tapé à la racine exécuterait la tâche <em>[run]</em> de <strong>tous</strong> les projets qui en ont une.</p>
+<p>Une fois le projet compilé, on peut aussi exécuter la classe directement avec la commande <em>[java]</em>, en lui indiquant où se trouvent les classes (dans le dossier <em>[PremierProgramme]</em>) :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span>
+<span class="normal"><a href="#__codelineno-17-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a>&gt; java -cp build/classes/kotlin/main premier.MainKt
+<a id="__codelineno-17-2" name="__codelineno-17-2"></a>1er essai avec un projet Gradle / Kotlin 2.4
+</code></pre></div></td></tr></table></div>
+<p>Cela fonctionne ici parce que ce programme n&#x27;utilise en fait rien de la bibliothèque standard de Kotlin à l&#x27;exécution : le compilateur remplace l&#x27;appel de <em>[println]</em> par un appel direct de <strong><em>[System.out.println]</em></strong>. Mais un programme qui utilise, par exemple, une liste (<strong><em>[listOf(1, 2, 3)]</em></strong>) échoue de cette façon avec l&#x27;erreur <strong><em>[java.lang.NoClassDefFoundError: kotlin/collections/CollectionsKt]</em></strong> : la classe <em>[CollectionsKt]</em> de la bibliothèque standard est introuvable. Il faut alors ajouter au chemin de classes l&#x27;archive <em>[kotlin-stdlib-2.4.20.jar]</em> (elle est dans le cache de Gradle ; le dossier <em>[lib]</em> du compilateur <em>[kotlinc]</em> la contient aussi, sous le nom <em>[kotlin-stdlib.jar]</em>) : <strong><em>[java -cp &quot;build/classes/kotlin/main;chemin/kotlin-stdlib-2.4.20.jar&quot; premier.MainKt]</em></strong> sous Windows (le séparateur est <em>[:]</em> sous Linux et macOS). La commande <strong><em>[kotlinr -cp build/classes/kotlin/main premier.MainKt]</em></strong> du compilateur en ligne de commande le fait pour nous.</p>
+<p>Le plus simple est de demander à Gradle de rassembler le programme et tout ce dont il a besoin, avec la tâche <em>[installDist]</em> du plugin <em>[application]</em> :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a>&gt; gradlew -q :PremierProgramme:installDist
+</code></pre></div></td></tr></table></div>
+<p>Elle crée le dossier <em>[PremierProgramme/build/install/PremierProgramme]</em>, qui contient un dossier <em>[lib]</em> (l&#x27;archive du projet, la bibliothèque standard de Kotlin et, le cas échéant, les autres bibliothèques du projet) et un dossier <em>[bin]</em> avec deux scripts de lancement, <em>[PremierProgramme]</em> (Linux, macOS) et <em>[PremierProgramme.bat]</em> (Windows), qui appellent <em>[java]</em> avec le bon chemin de classes. C&#x27;est sous cette forme, que l&#x27;on peut copier sur un autre poste muni d&#x27;un JDK, qu&#x27;un programme est livré :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1">1</a></span>
+<span class="normal"><a href="#__codelineno-19-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a>&gt; PremierProgramme\build\install\PremierProgramme\bin\PremierProgramme
+<a id="__codelineno-19-2" name="__codelineno-19-2"></a>1er essai avec un projet Gradle / Kotlin 2.4
+</code></pre></div></td></tr></table></div>
+<p>Le dossier <em>[build]</em> peut être supprimé sans risque (<strong><em>[gradlew clean]</em></strong>) : il est recréé par la compilation suivante. La commande <strong><em>[gradlew build]</em></strong> produit aussi l&#x27;archive <em>[build/libs/PremierProgramme-1.0.jar]</em> du projet, qui ne contient que ses propres classes.</p>
+<h2 id="27-un-projet-de-plusieurs-modules">2.7. <span style="color: #2e74b5">Un projet de plusieurs modules</span></h2>
+<h3 id="271-la-construction-multi-projets">2.7.1. <span style="color: #1f4d78">La construction multi-projets</span></h3>
+<p>Une construction Gradle peut regrouper plusieurs projets, appelés ses <strong>sous-projets</strong> (ou modules). C&#x27;est le fichier <em>[settings.gradle.kts]</em> de la racine qui les énumère. Celui du dossier <em>[02-installation]</em> est le suivant :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-20-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-20-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-20-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-20-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-20-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-20-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-20-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-20-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-20-10">10</a></span>
+<span class="normal"><a href="#__codelineno-20-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="c1">// chapitre 2 : une construction Gradle qui regroupe les deux projets du dossier</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2"></a>
+<a id="__codelineno-20-3" name="__codelineno-20-3"></a><span class="c1">// Gradle télécharge lui-même le JDK demandé par jvmToolchain(25) s'il ne le trouve pas sur le poste</span>
+<a id="__codelineno-20-4" name="__codelineno-20-4"></a><span class="n">plugins</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-20-5" name="__codelineno-20-5"></a><span class="w">    </span><span class="n">id</span><span class="p">(</span><span class="s">"org.gradle.toolchains.foojay-resolver-convention"</span><span class="p">)</span><span class="w"> </span><span class="n">version</span><span class="w"> </span><span class="s">"1.0.0"</span>
+<a id="__codelineno-20-6" name="__codelineno-20-6"></a><span class="p">}</span>
+<a id="__codelineno-20-7" name="__codelineno-20-7"></a>
+<a id="__codelineno-20-8" name="__codelineno-20-8"></a><span class="n">rootProject</span><span class="p">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"installation"</span>
+<a id="__codelineno-20-9" name="__codelineno-20-9"></a>
+<a id="__codelineno-20-10" name="__codelineno-20-10"></a><span class="c1">// les sous-projets, désignés par le nom de leur dossier</span>
+<a id="__codelineno-20-11" name="__codelineno-20-11"></a><span class="n">include</span><span class="p">(</span><span class="s">"PremierProgramme"</span><span class="p">,</span><span class="w"> </span><span class="s">"DeuxMains"</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>lignes 3-6 : un plugin de la construction elle-même (et non d&#x27;un projet), <em>[foojay-resolver-convention]</em> : lorsqu&#x27;un projet demande par <strong><em>[jvmToolchain(25)]</em></strong> un JDK que Gradle ne trouve pas sur le poste, Gradle le télécharge depuis le service <a href="https://foojay.io/">foojay.io</a> et le range dans son cache. Le premier lancement est un peu plus long, mais l&#x27;étudiant n&#x27;a plus besoin d&#x27;avoir installé le bon JDK. Le bloc <strong><em>[plugins]</em></strong> doit être le premier du fichier. Toutes les constructions du cours déclarent ce plugin ;</li>
+<li>ligne 8 : le nom de la construction (le projet racine). Sans cette ligne, ce serait le nom du dossier ;</li>
+<li>ligne 11 : les sous-projets, désignés par le nom de leur dossier. Un sous-projet peut être rangé plus profondément : <strong><em>[include(&quot;ImpotsV5:impots-dao&quot;)]</em></strong> désigne le projet du dossier <em>[ImpotsV5/impots-dao]</em> (chapitre 6).</li>
+</ul>
+<p>Le projet racine a lui aussi un fichier <em>[build.gradle.kts]</em> :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1">1</a></span>
+<span class="normal"><a href="#__codelineno-21-2">2</a></span>
+<span class="normal"><a href="#__codelineno-21-3">3</a></span>
+<span class="normal"><a href="#__codelineno-21-4">4</a></span>
+<span class="normal"><a href="#__codelineno-21-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1"></a><span class="c1">// chapitre 2 : projet racine. Le plugin Kotlin est déclaré ici, avec sa version, sans être appliqué :</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2"></a><span class="c1">// ce sont les sous-projets qui l'appliquent</span>
+<a id="__codelineno-21-3" name="__codelineno-21-3"></a><span class="n">plugins</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-21-4" name="__codelineno-21-4"></a><span class="w">    </span><span class="n">kotlin</span><span class="p">(</span><span class="s">"jvm"</span><span class="p">)</span><span class="w"> </span><span class="n">version</span><span class="w"> </span><span class="s">"2.4.20"</span><span class="w"> </span><span class="n">apply</span><span class="w"> </span><span class="kc">false</span>
+<a id="__codelineno-21-5" name="__codelineno-21-5"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>lignes 3-4 : le plugin Kotlin est déclaré, avec sa version, mais il n&#x27;est pas appliqué au projet racine (<strong><em>[apply false]</em></strong>), qui ne contient pas de code à compiler. Cette déclaration rend le plugin disponible pour les sous-projets, qui l&#x27;appliquent par <strong><em>[kotlin(&quot;jvm&quot;)]</em></strong> sans répéter la version : tous les sous-projets utilisent ainsi la même version de Kotlin, que l&#x27;on change en un seul endroit. Si chaque sous-projet déclarait lui-même la version du plugin, Gradle le chargerait plusieurs fois, ce que le plugin Kotlin déconseille.</li>
+</ul>
+<p>Dans le dossier <em>[02-installation]</em>, la commande <strong><em>[gradlew build]</em></strong> compile les deux projets ; un IDE qui ouvre ce dossier y voit les deux projets à la fois. Au chapitre 6, nous verrons qu&#x27;un sous-projet peut dépendre d&#x27;un autre (<strong><em>[implementation(project(&quot;:ImpotsV5:impots-dao&quot;))]</em></strong>), et aux chapitres 10 à 13 qu&#x27;une construction peut même réutiliser les projets d&#x27;une autre construction (<strong><em>[includeBuild]</em></strong>).</p>
+<h3 id="272-un-projet-avec-plusieurs-fonctions-main">2.7.2. <span style="color: #1f4d78">Un projet avec plusieurs fonctions main</span></h3>
+<p>Un projet peut contenir plusieurs fichiers ayant chacun une fonction <em>[main]</em> : chacun est un point d&#x27;entrée possible, et c&#x27;est au moment de l&#x27;exécution que l&#x27;on choisit la classe à exécuter. Le projet <em>[DeuxMains]</em> contient deux fichiers du paquetage <em>[deuxmains]</em>. Le fichier <em>[P1.kt]</em> :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1">1</a></span>
+<span class="normal"><a href="#__codelineno-22-2">2</a></span>
+<span class="normal"><a href="#__codelineno-22-3">3</a></span>
+<span class="normal"><a href="#__codelineno-22-4">4</a></span>
+<span class="normal"><a href="#__codelineno-22-5">5</a></span>
+<span class="normal"><a href="#__codelineno-22-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1"></a><span class="k">package</span><span class="w"> </span><span class="nn">deuxmains</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2"></a>
+<a id="__codelineno-22-3" name="__codelineno-22-3"></a><span class="c1">// un premier point d'entrée du projet [DeuxMains]</span>
+<a id="__codelineno-22-4" name="__codelineno-22-4"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-22-5" name="__codelineno-22-5"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"main du fichier P1.kt"</span><span class="p">)</span>
+<a id="__codelineno-22-6" name="__codelineno-22-6"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>et le fichier <em>[P2.kt]</em>, identique au nom près. Les deux fonctions s&#x27;appellent <em>[main]</em> et appartiennent au même paquetage : il n&#x27;y a pas de conflit, car elles sont placées dans deux classes différentes, <em>[deuxmains.P1Kt]</em> et <em>[deuxmains.P2Kt]</em>. La commande <em>[java]</em> exécute la classe qu&#x27;on lui désigne (dans le dossier <em>[DeuxMains]</em>, une fois le projet compilé) :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1">1</a></span>
+<span class="normal"><a href="#__codelineno-23-2">2</a></span>
+<span class="normal"><a href="#__codelineno-23-3">3</a></span>
+<span class="normal"><a href="#__codelineno-23-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1"></a>&gt; java -cp build/classes/kotlin/main deuxmains.P1Kt
+<a id="__codelineno-23-2" name="__codelineno-23-2"></a>main du fichier P1.kt
+<a id="__codelineno-23-3" name="__codelineno-23-3"></a>&gt; java -cp build/classes/kotlin/main deuxmains.P2Kt
+<a id="__codelineno-23-4" name="__codelineno-23-4"></a>main du fichier P2.kt
+</code></pre></div></td></tr></table></div>
+<p>Pour la commande <strong><em>[gradlew run]</em></strong>, c&#x27;est le fichier <em>[build.gradle.kts]</em> du projet qui désigne la classe à exécuter :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1">1</a></span>
+<span class="normal"><a href="#__codelineno-24-2">2</a></span>
+<span class="normal"><a href="#__codelineno-24-3">3</a></span>
+<span class="normal"><a href="#__codelineno-24-4">4</a></span>
+<span class="normal"><a href="#__codelineno-24-5">5</a></span>
+<span class="normal"><a href="#__codelineno-24-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1"></a>application {
+<a id="__codelineno-24-2" name="__codelineno-24-2"></a>    // le programme exécuté par [gradlew run] est désigné par la propriété [main] ;
+<a id="__codelineno-24-3" name="__codelineno-24-3"></a>    // à défaut, c'est la fonction main du fichier P2.kt :
+<a id="__codelineno-24-4" name="__codelineno-24-4"></a>    // gradlew -q :DeuxMains:run -Pmain=deuxmains.P1Kt
+<a id="__codelineno-24-5" name="__codelineno-24-5"></a>    mainClass = providers.gradleProperty("main").orElse("deuxmains.P2Kt")
+<a id="__codelineno-24-6" name="__codelineno-24-6"></a>}
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>ligne 5 : la classe exécutée est désignée par la <strong>propriété</strong> <em>[main]</em> de Gradle, que l&#x27;on donne sur la ligne de commande par l&#x27;option <strong><em>[-Pmain=...]</em></strong>. La fonction <strong><em>[providers.gradleProperty(&quot;main&quot;)]</em></strong> lit cette propriété ; <strong><em>[orElse(...)]</em></strong> donne la valeur à utiliser si elle n&#x27;a pas été donnée : ici, la classe <em>[deuxmains.P2Kt]</em>.</li>
+</ul>
+<p>Le reste du fichier reprend celui de <em>[PremierProgramme]</em>, avec en plus un réglage de la tâche <em>[run]</em> (<strong><em>[standardInput = System.<code>in</code>]</em></strong>) qui transmet au programme ce que l&#x27;on tape au clavier : sans lui, un programme lancé par <strong><em>[gradlew run]</em></strong> ne peut pas lire le clavier.</p>
+<p>Résultats :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1">1</a></span>
+<span class="normal"><a href="#__codelineno-25-2">2</a></span>
+<span class="normal"><a href="#__codelineno-25-3">3</a></span>
+<span class="normal"><a href="#__codelineno-25-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1"></a>&gt; gradlew -q :DeuxMains:run
+<a id="__codelineno-25-2" name="__codelineno-25-2"></a>main du fichier P2.kt
+<a id="__codelineno-25-3" name="__codelineno-25-3"></a>&gt; gradlew -q :DeuxMains:run -Pmain=deuxmains.P1Kt
+<a id="__codelineno-25-4" name="__codelineno-25-4"></a>main du fichier P1.kt
+</code></pre></div></td></tr></table></div>
+<p>On choisit ainsi le programme à exécuter sans modifier le fichier <em>[build.gradle.kts]</em>. Avec IntelliJ IDEA, la question ne se pose pas : chaque fonction <em>[main]</em> a son propre triangle vert dans la marge.</p>
+<h3 id="273-un-paquetage-par-programme">2.7.3. <span style="color: #1f4d78">Un paquetage par programme</span></h3>
+<p>Les projets des chapitres suivants utilisent tous ce mécanisme, car chacun contient de nombreux petits programmes. Pour que ces programmes ne se gênent pas, le document suit une convention simple : <strong>chaque programme a son propre paquetage</strong>, qui porte son nom en minuscules et est rangé dans le dossier du même nom. Ainsi, le programme <em>[Bases04.kt]</em> du chapitre 3 est le fichier <em>[03-bases/src/main/kotlin/bases04/Bases04.kt]</em>, qui commence par la ligne <strong><em>[package bases04]</em></strong> ; sa classe est <em>[bases04.Bases04Kt]</em>, et on l&#x27;exécute par :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1"></a>gradlew -q run -Pmain=bases04.Bases04Kt
+</code></pre></div></td></tr></table></div>
+<p>Cette convention a deux raisons :</p>
+<ul>
+<li>tous les programmes d&#x27;un projet sont compilés ensemble. S&#x27;ils étaient dans le même paquetage, deux programmes ne pourraient pas déclarer une fonction ou une classe de même nom (une fonction <em>[afficher]</em>, une classe <em>[Personne]</em>…) : le compilateur signalerait une déclaration en double. Avec un paquetage par programme, chacun a son propre espace de noms ;</li>
+<li>un programme formé de plusieurs fichiers est simplement un paquetage de plusieurs fichiers : au chapitre 4, le paquetage <em>[personnes]</em> contient la classe <em>[Personne]</em> dans <em>[Personne.kt]</em> et le programme principal dans <em>[Main.kt]</em>, exécuté par <strong><em>[-Pmain=personnes.MainKt]</em></strong>.</li>
+</ul>
+<p>Le texte de chaque chapitre donne, avant les résultats d&#x27;un programme, la commande exacte qui l&#x27;exécute. Nous reviendrons sur cette organisation au chapitre 3.</p>
+<h2 id="28-les-exemples-du-document">2.8. <span style="color: #2e74b5">Les exemples du document</span></h2>
+<p>Pour exécuter les exemples du document :</p>
+<ul>
+<li>on récupère le dossier <em>[kotlin-oct-2026]</em> (lien en début de document). Il contient un dossier par chapitre (<em>[02-installation]</em>, <em>[03-bases]</em>, <em>[04-classes]</em>…), et chacun de ces dossiers est une construction Gradle, avec son wrapper : un projet unique, ou plusieurs sous-projets regroupés par son fichier <em>[settings.gradle.kts]</em> ;</li>
+<li>on ouvre le dossier d&#x27;un chapitre dans IntelliJ IDEA (« File / Open ») ; on exécute alors un programme par le <strong>triangle vert</strong> placé à côté de sa fonction <em>[main]</em> ;</li>
+<li>ou bien, dans un terminal placé dans le dossier du chapitre, on exécute un programme par <strong><em>[gradlew -q run -Pmain=paquetage.ClasseKt]</em></strong> (avec, s&#x27;il y a plusieurs sous-projets, le chemin du sous-projet devant <em>[run]</em>) ; le texte de chaque chapitre donne la commande exacte.</li>
+</ul>
+<p>La première commande <em>[gradlew]</em> d&#x27;un chapitre a besoin d&#x27;un accès à Internet : Gradle télécharge alors sa propre distribution, le plugin Kotlin et les bibliothèques du projet, qu&#x27;il conserve ensuite dans son cache.</p>
+<p>Les chapitres 10 et 11 utilisent une base de données MySQL ; l&#x27;installation de MySQL avec <em>[Laragon]</em> est décrite en annexe.</p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner">
+
+      <div>
+        <a href="https://stahe.github.io" target="_blank">
+          https://stahe.github.io
+        </a>
+        <br>
+        Ce cours, rédigé par l’IA d’Anthropic <strong>Claude</strong> à la demande de <strong>Serge Tahé</strong>, est mis à la disposition du public selon les termes de la
+        <em>licence Creative Commons Attribution – Pas d’utilisation commerciale –
+        ShareAlike 3.0 Unported</em>.
+
+      </div>
+
+    </div>
+  </div>
+
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.indexes", "navigation.expand", "toc.integrate", "navigation.top"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="javascripts/focus.js"></script>
+      
+    
+  </body>
+</html>
