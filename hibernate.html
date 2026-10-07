@@ -3557,81 +3557,81 @@
 <span class="normal"><a href="#__codelineno-22-72">72</a></span>
 <span class="normal"><a href="#__codelineno-22-73">73</a></span>
 <span class="normal"><a href="#__codelineno-22-74">74</a></span>
-<span class="normal"><a href="#__codelineno-22-75">75</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1"></a><span class="o">&gt;</span><span class="w"> </span><span class="n">gradlew</span><span class="w"> </span><span class="o">-</span><span class="n">q</span><span class="w"> </span><span class="p">:</span><span class="n">crud</span><span class="p">:</span><span class="n">run</span>
-<a id="__codelineno-22-2" name="__codelineno-22-2"></a><span class="c1">--- find(1)</span>
-<a id="__codelineno-22-3" name="__codelineno-22-3"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">select</span><span class="w"> </span><span class="n">a1_0</span><span class="p">.</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">a1_0</span><span class="p">.</span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">a1_0</span><span class="p">.</span><span class="n">prix</span><span class="p">,</span><span class="w"> </span><span class="n">a1_0</span><span class="p">.</span><span class="n">stockActuel</span><span class="p">,</span><span class="w"> </span><span class="n">a1_0</span><span class="p">.</span><span class="n">stockMinimum</span>
-<a id="__codelineno-22-4" name="__codelineno-22-4"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">articles</span><span class="w"> </span><span class="n">a1_0</span>
-<a id="__codelineno-22-5" name="__codelineno-22-5"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">a1_0</span><span class="p">.</span><span class="n">id</span><span class="o">=?</span>
-<a id="__codelineno-22-6" name="__codelineno-22-6"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="c1">-- paramètre 1 = 1</span>
-<a id="__codelineno-22-7" name="__codelineno-22-7"></a><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">vélo</span><span class="p">,</span><span class="w"> </span><span class="mi">500</span><span class="p">,</span><span class="mi">00</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">]</span>
-<a id="__codelineno-22-8" name="__codelineno-22-8"></a><span class="c1">--- find(1) une seconde fois</span>
-<a id="__codelineno-22-9" name="__codelineno-22-9"></a><span class="n">même</span><span class="w"> </span><span class="n">objet</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="k">true</span>
-<a id="__codelineno-22-10" name="__codelineno-22-10"></a><span class="c1">--- persist</span>
-<a id="__codelineno-22-11" name="__codelineno-22-11"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="c1">-- début de transaction</span>
-<a id="__codelineno-22-12" name="__codelineno-22-12"></a><span class="n">avant</span><span class="w"> </span><span class="n">persist</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">é</span><span class="n">tat</span><span class="o">=</span><span class="n">TRANSIENT</span><span class="p">,</span><span class="w"> </span><span class="n">id</span><span class="o">=</span><span class="k">null</span>
-<a id="__codelineno-22-13" name="__codelineno-22-13"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">insert</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="n">articles</span><span class="w"> </span><span class="p">(</span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">prix</span><span class="p">,</span><span class="w"> </span><span class="n">stockActuel</span><span class="p">,</span><span class="w"> </span><span class="n">stockMinimum</span><span class="p">)</span>
-<a id="__codelineno-22-14" name="__codelineno-22-14"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">values</span><span class="w"> </span><span class="p">(</span><span class="o">?</span><span class="p">,</span><span class="w"> </span><span class="o">?</span><span class="p">,</span><span class="w"> </span><span class="o">?</span><span class="p">,</span><span class="w"> </span><span class="o">?</span><span class="p">)</span>
-<a id="__codelineno-22-15" name="__codelineno-22-15"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="c1">-- paramètre 1 = x</span>
-<a id="__codelineno-22-16" name="__codelineno-22-16"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="c1">-- paramètre 2 = 100</span>
-<a id="__codelineno-22-17" name="__codelineno-22-17"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="c1">-- paramètre 3 = 10</span>
-<a id="__codelineno-22-18" name="__codelineno-22-18"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="c1">-- paramètre 4 = 1</span>
-<a id="__codelineno-22-19" name="__codelineno-22-19"></a><span class="n">après</span><span class="w"> </span><span class="n">persist</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">é</span><span class="n">tat</span><span class="o">=</span><span class="n">MANAGED</span><span class="p">,</span><span class="w"> </span><span class="n">id</span><span class="o">=</span><span class="mi">7</span>
-<a id="__codelineno-22-20" name="__codelineno-22-20"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="c1">-- transaction validée (COMMIT)</span>
-<a id="__codelineno-22-21" name="__codelineno-22-21"></a><span class="c1">--- modification du prix</span>
-<a id="__codelineno-22-22" name="__codelineno-22-22"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="c1">-- début de transaction</span>
-<a id="__codelineno-22-23" name="__codelineno-22-23"></a><span class="k">session</span><span class="w"> </span><span class="n">modifiée</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="k">true</span><span class="p">,</span><span class="w"> </span><span class="n">prix</span><span class="w"> </span><span class="n">d</span><span class="s1">'origine=100, prix actuel=110.0</span>
-<a id="__codelineno-22-24" name="__codelineno-22-24"></a><span class="s1">--- commit</span>
-<a id="__codelineno-22-25" name="__codelineno-22-25"></a><span class="s1">    SQL&gt; update articles</span>
-<a id="__codelineno-22-26" name="__codelineno-22-26"></a><span class="s1">    SQL&gt; set nom=?, prix=?, stockActuel=?, stockMinimum=?</span>
-<a id="__codelineno-22-27" name="__codelineno-22-27"></a><span class="s1">    SQL&gt; where id=?</span>
-<a id="__codelineno-22-28" name="__codelineno-22-28"></a><span class="s1">    SQL&gt; -- paramètre 1 = x</span>
-<a id="__codelineno-22-29" name="__codelineno-22-29"></a><span class="s1">    SQL&gt; -- paramètre 2 = 110.0</span>
-<a id="__codelineno-22-30" name="__codelineno-22-30"></a><span class="s1">    SQL&gt; -- paramètre 3 = 10</span>
-<a id="__codelineno-22-31" name="__codelineno-22-31"></a><span class="s1">    SQL&gt; -- paramètre 4 = 1</span>
-<a id="__codelineno-22-32" name="__codelineno-22-32"></a><span class="s1">    SQL&gt; -- paramètre 5 = 7</span>
-<a id="__codelineno-22-33" name="__codelineno-22-33"></a><span class="s1">    SQL&gt; -- transaction validée (COMMIT)</span>
-<a id="__codelineno-22-34" name="__codelineno-22-34"></a><span class="s1">après commit : session modifiée : false</span>
-<a id="__codelineno-22-35" name="__codelineno-22-35"></a><span class="s1">--- remove</span>
-<a id="__codelineno-22-36" name="__codelineno-22-36"></a><span class="s1">    SQL&gt; -- début de transaction</span>
-<a id="__codelineno-22-37" name="__codelineno-22-37"></a><span class="s1">avant commit : état=DELETED</span>
-<a id="__codelineno-22-38" name="__codelineno-22-38"></a><span class="s1">    SQL&gt; delete from articles</span>
-<a id="__codelineno-22-39" name="__codelineno-22-39"></a><span class="s1">    SQL&gt; where id=?</span>
-<a id="__codelineno-22-40" name="__codelineno-22-40"></a><span class="s1">    SQL&gt; -- paramètre 1 = 7</span>
-<a id="__codelineno-22-41" name="__codelineno-22-41"></a><span class="s1">    SQL&gt; -- transaction validée (COMMIT)</span>
-<a id="__codelineno-22-42" name="__codelineno-22-42"></a><span class="s1">après commit : état=DETACHED</span>
-<a id="__codelineno-22-43" name="__codelineno-22-43"></a><span class="s1">--- detach et merge</span>
-<a id="__codelineno-22-44" name="__codelineno-22-44"></a><span class="s1">    SQL&gt; select a1_0.id, a1_0.nom, a1_0.prix, a1_0.stockActuel, a1_0.stockMinimum</span>
-<a id="__codelineno-22-45" name="__codelineno-22-45"></a><span class="s1">    SQL&gt; from articles a1_0</span>
-<a id="__codelineno-22-46" name="__codelineno-22-46"></a><span class="s1">    SQL&gt; where a1_0.id=?</span>
-<a id="__codelineno-22-47" name="__codelineno-22-47"></a><span class="s1">    SQL&gt; -- paramètre 1 = 3</span>
-<a id="__codelineno-22-48" name="__codelineno-22-48"></a><span class="s1">après detach : état=DETACHED</span>
-<a id="__codelineno-22-49" name="__codelineno-22-49"></a><span class="s1">    SQL&gt; -- début de transaction</span>
-<a id="__codelineno-22-50" name="__codelineno-22-50"></a><span class="s1">    SQL&gt; select a1_0.id, a1_0.nom, a1_0.prix, a1_0.stockActuel, a1_0.stockMinimum</span>
-<a id="__codelineno-22-51" name="__codelineno-22-51"></a><span class="s1">    SQL&gt; from articles a1_0</span>
-<a id="__codelineno-22-52" name="__codelineno-22-52"></a><span class="s1">    SQL&gt; where a1_0.id=?</span>
-<a id="__codelineno-22-53" name="__codelineno-22-53"></a><span class="s1">    SQL&gt; -- paramètre 1 = 3</span>
-<a id="__codelineno-22-54" name="__codelineno-22-54"></a><span class="s1">merge : même objet=false, état de l'</span><span class="n">objet</span><span class="w"> </span><span class="n">rendu</span><span class="o">=</span><span class="n">MANAGED</span>
-<a id="__codelineno-22-55" name="__codelineno-22-55"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">update</span><span class="w"> </span><span class="n">articles</span>
-<a id="__codelineno-22-56" name="__codelineno-22-56"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">set</span><span class="w"> </span><span class="n">nom</span><span class="o">=?</span><span class="p">,</span><span class="w"> </span><span class="n">prix</span><span class="o">=?</span><span class="p">,</span><span class="w"> </span><span class="n">stockActuel</span><span class="o">=?</span><span class="p">,</span><span class="w"> </span><span class="n">stockMinimum</span><span class="o">=?</span>
-<a id="__codelineno-22-57" name="__codelineno-22-57"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">id</span><span class="o">=?</span>
-<a id="__codelineno-22-58" name="__codelineno-22-58"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="c1">-- paramètre 1 = arc</span>
-<a id="__codelineno-22-59" name="__codelineno-22-59"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="c1">-- paramètre 2 = 550</span>
-<a id="__codelineno-22-60" name="__codelineno-22-60"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="c1">-- paramètre 3 = 4</span>
-<a id="__codelineno-22-61" name="__codelineno-22-61"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="c1">-- paramètre 4 = 1</span>
-<a id="__codelineno-22-62" name="__codelineno-22-62"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="c1">-- paramètre 5 = 3</span>
-<a id="__codelineno-22-63" name="__codelineno-22-63"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="c1">-- transaction validée (COMMIT)</span>
-<a id="__codelineno-22-64" name="__codelineno-22-64"></a><span class="c1">--- les entités suivies</span>
-<a id="__codelineno-22-65" name="__codelineno-22-65"></a><span class="n">articles</span><span class="p">.</span><span class="n">Article</span><span class="w"> </span><span class="o">#</span><span class="mi">1</span><span class="w"> </span><span class="n">MANAGED</span>
-<a id="__codelineno-22-66" name="__codelineno-22-66"></a><span class="w">    </span><span class="n">nom</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">vélo</span>
-<a id="__codelineno-22-67" name="__codelineno-22-67"></a><span class="w">    </span><span class="n">prix</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">500</span><span class="p">.</span><span class="mi">00</span>
-<a id="__codelineno-22-68" name="__codelineno-22-68"></a><span class="w">    </span><span class="n">stockActuel</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="w"> </span><span class="p">(</span><span class="n">modifiée</span><span class="p">,</span><span class="w"> </span><span class="n">valeur</span><span class="w"> </span><span class="n">d</span><span class="err">'</span><span class="n">origine</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span>
-<a id="__codelineno-22-69" name="__codelineno-22-69"></a><span class="w">    </span><span class="n">stockMinimum</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">5</span>
-<a id="__codelineno-22-70" name="__codelineno-22-70"></a><span class="n">articles</span><span class="p">.</span><span class="n">Article</span><span class="w"> </span><span class="o">#</span><span class="mi">3</span><span class="w"> </span><span class="n">MANAGED</span>
-<a id="__codelineno-22-71" name="__codelineno-22-71"></a><span class="w">    </span><span class="n">nom</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">arc</span>
-<a id="__codelineno-22-72" name="__codelineno-22-72"></a><span class="w">    </span><span class="n">prix</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">550</span>
-<a id="__codelineno-22-73" name="__codelineno-22-73"></a><span class="w">    </span><span class="n">stockActuel</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">4</span>
-<a id="__codelineno-22-74" name="__codelineno-22-74"></a><span class="w">    </span><span class="n">stockMinimum</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
-<a id="__codelineno-22-75" name="__codelineno-22-75"></a><span class="k">session</span><span class="w"> </span><span class="n">modifiée</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="k">true</span>
+<span class="normal"><a href="#__codelineno-22-75">75</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1"></a>&gt; gradlew -q :crud:run
+<a id="__codelineno-22-2" name="__codelineno-22-2"></a>--- find(1)
+<a id="__codelineno-22-3" name="__codelineno-22-3"></a>    SQL&gt; select a1_0.id, a1_0.nom, a1_0.prix, a1_0.stockActuel, a1_0.stockMinimum
+<a id="__codelineno-22-4" name="__codelineno-22-4"></a>    SQL&gt; from articles a1_0
+<a id="__codelineno-22-5" name="__codelineno-22-5"></a>    SQL&gt; where a1_0.id=?
+<a id="__codelineno-22-6" name="__codelineno-22-6"></a>    SQL&gt; -- paramètre 1 = 1
+<a id="__codelineno-22-7" name="__codelineno-22-7"></a>[1, vélo, 500,00, 10, 5]
+<a id="__codelineno-22-8" name="__codelineno-22-8"></a>--- find(1) une seconde fois
+<a id="__codelineno-22-9" name="__codelineno-22-9"></a>même objet : true
+<a id="__codelineno-22-10" name="__codelineno-22-10"></a>--- persist
+<a id="__codelineno-22-11" name="__codelineno-22-11"></a>    SQL&gt; -- début de transaction
+<a id="__codelineno-22-12" name="__codelineno-22-12"></a>avant persist : état=TRANSIENT, id=null
+<a id="__codelineno-22-13" name="__codelineno-22-13"></a>    SQL&gt; insert into articles (nom, prix, stockActuel, stockMinimum)
+<a id="__codelineno-22-14" name="__codelineno-22-14"></a>    SQL&gt; values (?, ?, ?, ?)
+<a id="__codelineno-22-15" name="__codelineno-22-15"></a>    SQL&gt; -- paramètre 1 = x
+<a id="__codelineno-22-16" name="__codelineno-22-16"></a>    SQL&gt; -- paramètre 2 = 100
+<a id="__codelineno-22-17" name="__codelineno-22-17"></a>    SQL&gt; -- paramètre 3 = 10
+<a id="__codelineno-22-18" name="__codelineno-22-18"></a>    SQL&gt; -- paramètre 4 = 1
+<a id="__codelineno-22-19" name="__codelineno-22-19"></a>après persist : état=MANAGED, id=7
+<a id="__codelineno-22-20" name="__codelineno-22-20"></a>    SQL&gt; -- transaction validée (COMMIT)
+<a id="__codelineno-22-21" name="__codelineno-22-21"></a>--- modification du prix
+<a id="__codelineno-22-22" name="__codelineno-22-22"></a>    SQL&gt; -- début de transaction
+<a id="__codelineno-22-23" name="__codelineno-22-23"></a>session modifiée : true, prix d'origine=100, prix actuel=110.0
+<a id="__codelineno-22-24" name="__codelineno-22-24"></a>--- commit
+<a id="__codelineno-22-25" name="__codelineno-22-25"></a>    SQL&gt; update articles
+<a id="__codelineno-22-26" name="__codelineno-22-26"></a>    SQL&gt; set nom=?, prix=?, stockActuel=?, stockMinimum=?
+<a id="__codelineno-22-27" name="__codelineno-22-27"></a>    SQL&gt; where id=?
+<a id="__codelineno-22-28" name="__codelineno-22-28"></a>    SQL&gt; -- paramètre 1 = x
+<a id="__codelineno-22-29" name="__codelineno-22-29"></a>    SQL&gt; -- paramètre 2 = 110.0
+<a id="__codelineno-22-30" name="__codelineno-22-30"></a>    SQL&gt; -- paramètre 3 = 10
+<a id="__codelineno-22-31" name="__codelineno-22-31"></a>    SQL&gt; -- paramètre 4 = 1
+<a id="__codelineno-22-32" name="__codelineno-22-32"></a>    SQL&gt; -- paramètre 5 = 7
+<a id="__codelineno-22-33" name="__codelineno-22-33"></a>    SQL&gt; -- transaction validée (COMMIT)
+<a id="__codelineno-22-34" name="__codelineno-22-34"></a>après commit : session modifiée : false
+<a id="__codelineno-22-35" name="__codelineno-22-35"></a>--- remove
+<a id="__codelineno-22-36" name="__codelineno-22-36"></a>    SQL&gt; -- début de transaction
+<a id="__codelineno-22-37" name="__codelineno-22-37"></a>avant commit : état=DELETED
+<a id="__codelineno-22-38" name="__codelineno-22-38"></a>    SQL&gt; delete from articles
+<a id="__codelineno-22-39" name="__codelineno-22-39"></a>    SQL&gt; where id=?
+<a id="__codelineno-22-40" name="__codelineno-22-40"></a>    SQL&gt; -- paramètre 1 = 7
+<a id="__codelineno-22-41" name="__codelineno-22-41"></a>    SQL&gt; -- transaction validée (COMMIT)
+<a id="__codelineno-22-42" name="__codelineno-22-42"></a>après commit : état=DETACHED
+<a id="__codelineno-22-43" name="__codelineno-22-43"></a>--- detach et merge
+<a id="__codelineno-22-44" name="__codelineno-22-44"></a>    SQL&gt; select a1_0.id, a1_0.nom, a1_0.prix, a1_0.stockActuel, a1_0.stockMinimum
+<a id="__codelineno-22-45" name="__codelineno-22-45"></a>    SQL&gt; from articles a1_0
+<a id="__codelineno-22-46" name="__codelineno-22-46"></a>    SQL&gt; where a1_0.id=?
+<a id="__codelineno-22-47" name="__codelineno-22-47"></a>    SQL&gt; -- paramètre 1 = 3
+<a id="__codelineno-22-48" name="__codelineno-22-48"></a>après detach : état=DETACHED
+<a id="__codelineno-22-49" name="__codelineno-22-49"></a>    SQL&gt; -- début de transaction
+<a id="__codelineno-22-50" name="__codelineno-22-50"></a>    SQL&gt; select a1_0.id, a1_0.nom, a1_0.prix, a1_0.stockActuel, a1_0.stockMinimum
+<a id="__codelineno-22-51" name="__codelineno-22-51"></a>    SQL&gt; from articles a1_0
+<a id="__codelineno-22-52" name="__codelineno-22-52"></a>    SQL&gt; where a1_0.id=?
+<a id="__codelineno-22-53" name="__codelineno-22-53"></a>    SQL&gt; -- paramètre 1 = 3
+<a id="__codelineno-22-54" name="__codelineno-22-54"></a>merge : même objet=false, état de l'objet rendu=MANAGED
+<a id="__codelineno-22-55" name="__codelineno-22-55"></a>    SQL&gt; update articles
+<a id="__codelineno-22-56" name="__codelineno-22-56"></a>    SQL&gt; set nom=?, prix=?, stockActuel=?, stockMinimum=?
+<a id="__codelineno-22-57" name="__codelineno-22-57"></a>    SQL&gt; where id=?
+<a id="__codelineno-22-58" name="__codelineno-22-58"></a>    SQL&gt; -- paramètre 1 = arc
+<a id="__codelineno-22-59" name="__codelineno-22-59"></a>    SQL&gt; -- paramètre 2 = 550
+<a id="__codelineno-22-60" name="__codelineno-22-60"></a>    SQL&gt; -- paramètre 3 = 4
+<a id="__codelineno-22-61" name="__codelineno-22-61"></a>    SQL&gt; -- paramètre 4 = 1
+<a id="__codelineno-22-62" name="__codelineno-22-62"></a>    SQL&gt; -- paramètre 5 = 3
+<a id="__codelineno-22-63" name="__codelineno-22-63"></a>    SQL&gt; -- transaction validée (COMMIT)
+<a id="__codelineno-22-64" name="__codelineno-22-64"></a>--- les entités suivies
+<a id="__codelineno-22-65" name="__codelineno-22-65"></a>articles.Article #1 MANAGED
+<a id="__codelineno-22-66" name="__codelineno-22-66"></a>    nom : vélo
+<a id="__codelineno-22-67" name="__codelineno-22-67"></a>    prix : 500.00
+<a id="__codelineno-22-68" name="__codelineno-22-68"></a>    stockActuel : 9 (modifiée, valeur d'origine : 10)
+<a id="__codelineno-22-69" name="__codelineno-22-69"></a>    stockMinimum : 5
+<a id="__codelineno-22-70" name="__codelineno-22-70"></a>articles.Article #3 MANAGED
+<a id="__codelineno-22-71" name="__codelineno-22-71"></a>    nom : arc
+<a id="__codelineno-22-72" name="__codelineno-22-72"></a>    prix : 550
+<a id="__codelineno-22-73" name="__codelineno-22-73"></a>    stockActuel : 4
+<a id="__codelineno-22-74" name="__codelineno-22-74"></a>    stockMinimum : 1
+<a id="__codelineno-22-75" name="__codelineno-22-75"></a>session modifiée : true
 </code></pre></div></td></tr></table></div>
 <p>Commentaires :</p>
 <ul>
@@ -5055,36 +5055,36 @@
 <span class="normal"><a href="#__codelineno-37-27">27</a></span>
 <span class="normal"><a href="#__codelineno-37-28">28</a></span>
 <span class="normal"><a href="#__codelineno-37-29">29</a></span>
-<span class="normal"><a href="#__codelineno-37-30">30</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1"></a><span class="o">&gt;</span><span class="w"> </span><span class="n">mysql</span><span class="w"> </span><span class="o">-</span><span class="n">uroot</span><span class="w"> </span><span class="n">hbboutique</span><span class="w"> </span><span class="o">-</span><span class="n">e</span><span class="w"> </span><span class="ss">"SHOW TABLES; SHOW CREATE TABLE produits\G SHOW CREATE TABLE produits_etiquettes\G"</span>
-<a id="__codelineno-37-2" name="__codelineno-37-2"></a><span class="n">Tables_in_hbboutique</span>
-<a id="__codelineno-37-3" name="__codelineno-37-3"></a><span class="n">categories</span>
-<a id="__codelineno-37-4" name="__codelineno-37-4"></a><span class="n">clients</span>
-<a id="__codelineno-37-5" name="__codelineno-37-5"></a><span class="n">commandes</span>
-<a id="__codelineno-37-6" name="__codelineno-37-6"></a><span class="n">etiquettes</span>
-<a id="__codelineno-37-7" name="__codelineno-37-7"></a><span class="n">lignes_commande</span>
-<a id="__codelineno-37-8" name="__codelineno-37-8"></a><span class="n">produits</span>
-<a id="__codelineno-37-9" name="__codelineno-37-9"></a><span class="n">produits_etiquettes</span>
-<a id="__codelineno-37-10" name="__codelineno-37-10"></a><span class="o">***************************</span><span class="w"> </span><span class="mi">1</span><span class="p">.</span><span class="w"> </span><span class="k">row</span><span class="w"> </span><span class="o">***************************</span>
-<a id="__codelineno-37-11" name="__codelineno-37-11"></a><span class="w">       </span><span class="k">Table</span><span class="p">:</span><span class="w"> </span><span class="n">produits</span>
-<a id="__codelineno-37-12" name="__codelineno-37-12"></a><span class="k">Create</span><span class="w"> </span><span class="k">Table</span><span class="p">:</span><span class="w"> </span><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="o">`</span><span class="n">produits</span><span class="o">`</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-37-13" name="__codelineno-37-13"></a><span class="w">  </span><span class="o">`</span><span class="n">id</span><span class="o">`</span><span class="w"> </span><span class="nb">int</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="p">,</span>
-<a id="__codelineno-37-14" name="__codelineno-37-14"></a><span class="w">  </span><span class="o">`</span><span class="n">nom</span><span class="o">`</span><span class="w"> </span><span class="nb">varchar</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
-<a id="__codelineno-37-15" name="__codelineno-37-15"></a><span class="w">  </span><span class="o">`</span><span class="n">prix</span><span class="o">`</span><span class="w"> </span><span class="nb">decimal</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
-<a id="__codelineno-37-16" name="__codelineno-37-16"></a><span class="w">  </span><span class="o">`</span><span class="n">categorie_id</span><span class="o">`</span><span class="w"> </span><span class="nb">int</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
-<a id="__codelineno-37-17" name="__codelineno-37-17"></a><span class="w">  </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="o">`</span><span class="n">id</span><span class="o">`</span><span class="p">),</span>
-<a id="__codelineno-37-18" name="__codelineno-37-18"></a><span class="w">  </span><span class="k">KEY</span><span class="w"> </span><span class="o">`</span><span class="n">fk_produits_categorie</span><span class="o">`</span><span class="w"> </span><span class="p">(</span><span class="o">`</span><span class="n">categorie_id</span><span class="o">`</span><span class="p">),</span>
-<a id="__codelineno-37-19" name="__codelineno-37-19"></a><span class="w">  </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="o">`</span><span class="n">fk_produits_categorie</span><span class="o">`</span><span class="w"> </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="o">`</span><span class="n">categorie_id</span><span class="o">`</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="o">`</span><span class="n">categories</span><span class="o">`</span><span class="w"> </span><span class="p">(</span><span class="o">`</span><span class="n">id</span><span class="o">`</span><span class="p">)</span>
-<a id="__codelineno-37-20" name="__codelineno-37-20"></a><span class="p">)</span><span class="w"> </span><span class="n">ENGINE</span><span class="o">=</span><span class="n">InnoDB</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="o">=</span><span class="mi">5</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="n">CHARSET</span><span class="o">=</span><span class="n">utf8mb4</span><span class="w"> </span><span class="k">COLLATE</span><span class="o">=</span><span class="n">utf8mb4_0900_ai_ci</span>
-<a id="__codelineno-37-21" name="__codelineno-37-21"></a><span class="o">***************************</span><span class="w"> </span><span class="mi">1</span><span class="p">.</span><span class="w"> </span><span class="k">row</span><span class="w"> </span><span class="o">***************************</span>
-<a id="__codelineno-37-22" name="__codelineno-37-22"></a><span class="w">       </span><span class="k">Table</span><span class="p">:</span><span class="w"> </span><span class="n">produits_etiquettes</span>
-<a id="__codelineno-37-23" name="__codelineno-37-23"></a><span class="k">Create</span><span class="w"> </span><span class="k">Table</span><span class="p">:</span><span class="w"> </span><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="o">`</span><span class="n">produits_etiquettes</span><span class="o">`</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-37-24" name="__codelineno-37-24"></a><span class="w">  </span><span class="o">`</span><span class="n">produit_id</span><span class="o">`</span><span class="w"> </span><span class="nb">int</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
-<a id="__codelineno-37-25" name="__codelineno-37-25"></a><span class="w">  </span><span class="o">`</span><span class="n">etiquette_id</span><span class="o">`</span><span class="w"> </span><span class="nb">int</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
-<a id="__codelineno-37-26" name="__codelineno-37-26"></a><span class="w">  </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="o">`</span><span class="n">produit_id</span><span class="o">`</span><span class="p">,</span><span class="o">`</span><span class="n">etiquette_id</span><span class="o">`</span><span class="p">),</span>
-<a id="__codelineno-37-27" name="__codelineno-37-27"></a><span class="w">  </span><span class="k">KEY</span><span class="w"> </span><span class="o">`</span><span class="n">fk_produits_etiquettes_etiquette</span><span class="o">`</span><span class="w"> </span><span class="p">(</span><span class="o">`</span><span class="n">etiquette_id</span><span class="o">`</span><span class="p">),</span>
-<a id="__codelineno-37-28" name="__codelineno-37-28"></a><span class="w">  </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="o">`</span><span class="n">fk_produits_etiquettes_etiquette</span><span class="o">`</span><span class="w"> </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="o">`</span><span class="n">etiquette_id</span><span class="o">`</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="o">`</span><span class="n">etiquettes</span><span class="o">`</span><span class="w"> </span><span class="p">(</span><span class="o">`</span><span class="n">id</span><span class="o">`</span><span class="p">),</span>
-<a id="__codelineno-37-29" name="__codelineno-37-29"></a><span class="w">  </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="o">`</span><span class="n">fk_produits_etiquettes_produit</span><span class="o">`</span><span class="w"> </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="o">`</span><span class="n">produit_id</span><span class="o">`</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="o">`</span><span class="n">produits</span><span class="o">`</span><span class="w"> </span><span class="p">(</span><span class="o">`</span><span class="n">id</span><span class="o">`</span><span class="p">)</span>
-<a id="__codelineno-37-30" name="__codelineno-37-30"></a><span class="p">)</span><span class="w"> </span><span class="n">ENGINE</span><span class="o">=</span><span class="n">InnoDB</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="n">CHARSET</span><span class="o">=</span><span class="n">utf8mb4</span><span class="w"> </span><span class="k">COLLATE</span><span class="o">=</span><span class="n">utf8mb4_0900_ai_ci</span>
+<span class="normal"><a href="#__codelineno-37-30">30</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1"></a>&gt; mysql -uroot hbboutique -e "SHOW TABLES; SHOW CREATE TABLE produits\G SHOW CREATE TABLE produits_etiquettes\G"
+<a id="__codelineno-37-2" name="__codelineno-37-2"></a>Tables_in_hbboutique
+<a id="__codelineno-37-3" name="__codelineno-37-3"></a>categories
+<a id="__codelineno-37-4" name="__codelineno-37-4"></a>clients
+<a id="__codelineno-37-5" name="__codelineno-37-5"></a>commandes
+<a id="__codelineno-37-6" name="__codelineno-37-6"></a>etiquettes
+<a id="__codelineno-37-7" name="__codelineno-37-7"></a>lignes_commande
+<a id="__codelineno-37-8" name="__codelineno-37-8"></a>produits
+<a id="__codelineno-37-9" name="__codelineno-37-9"></a>produits_etiquettes
+<a id="__codelineno-37-10" name="__codelineno-37-10"></a>*************************** 1. row ***************************
+<a id="__codelineno-37-11" name="__codelineno-37-11"></a>       Table: produits
+<a id="__codelineno-37-12" name="__codelineno-37-12"></a>Create Table: CREATE TABLE `produits` (
+<a id="__codelineno-37-13" name="__codelineno-37-13"></a>  `id` int NOT NULL AUTO_INCREMENT,
+<a id="__codelineno-37-14" name="__codelineno-37-14"></a>  `nom` varchar(30) NOT NULL,
+<a id="__codelineno-37-15" name="__codelineno-37-15"></a>  `prix` decimal(10,2) NOT NULL,
+<a id="__codelineno-37-16" name="__codelineno-37-16"></a>  `categorie_id` int NOT NULL,
+<a id="__codelineno-37-17" name="__codelineno-37-17"></a>  PRIMARY KEY (`id`),
+<a id="__codelineno-37-18" name="__codelineno-37-18"></a>  KEY `fk_produits_categorie` (`categorie_id`),
+<a id="__codelineno-37-19" name="__codelineno-37-19"></a>  CONSTRAINT `fk_produits_categorie` FOREIGN KEY (`categorie_id`) REFERENCES `categories` (`id`)
+<a id="__codelineno-37-20" name="__codelineno-37-20"></a>) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+<a id="__codelineno-37-21" name="__codelineno-37-21"></a>*************************** 1. row ***************************
+<a id="__codelineno-37-22" name="__codelineno-37-22"></a>       Table: produits_etiquettes
+<a id="__codelineno-37-23" name="__codelineno-37-23"></a>Create Table: CREATE TABLE `produits_etiquettes` (
+<a id="__codelineno-37-24" name="__codelineno-37-24"></a>  `produit_id` int NOT NULL,
+<a id="__codelineno-37-25" name="__codelineno-37-25"></a>  `etiquette_id` int NOT NULL,
+<a id="__codelineno-37-26" name="__codelineno-37-26"></a>  PRIMARY KEY (`produit_id`,`etiquette_id`),
+<a id="__codelineno-37-27" name="__codelineno-37-27"></a>  KEY `fk_produits_etiquettes_etiquette` (`etiquette_id`),
+<a id="__codelineno-37-28" name="__codelineno-37-28"></a>  CONSTRAINT `fk_produits_etiquettes_etiquette` FOREIGN KEY (`etiquette_id`) REFERENCES `etiquettes` (`id`),
+<a id="__codelineno-37-29" name="__codelineno-37-29"></a>  CONSTRAINT `fk_produits_etiquettes_produit` FOREIGN KEY (`produit_id`) REFERENCES `produits` (`id`)
+<a id="__codelineno-37-30" name="__codelineno-37-30"></a>) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>la liste des tables : une table par entité, et la table d&#x27;association <em>[produits_etiquettes]</em> ;</li>
@@ -5490,127 +5490,127 @@
 <span class="normal"><a href="#__codelineno-39-118">118</a></span>
 <span class="normal"><a href="#__codelineno-39-119">119</a></span>
 <span class="normal"><a href="#__codelineno-39-120">120</a></span>
-<span class="normal"><a href="#__codelineno-39-121">121</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1"></a><span class="o">&gt;</span><span class="w"> </span><span class="n">gradlew</span><span class="w"> </span><span class="o">-</span><span class="n">q</span><span class="w"> </span><span class="p">:</span><span class="n">relations</span><span class="p">:</span><span class="n">run</span>
-<a id="__codelineno-39-2" name="__codelineno-39-2"></a><span class="c1">--- ajout d'un client, d'une commande et de ses deux lignes</span>
-<a id="__codelineno-39-3" name="__codelineno-39-3"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="c1">-- début de transaction</span>
-<a id="__codelineno-39-4" name="__codelineno-39-4"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">select</span><span class="w"> </span><span class="n">p1_0</span><span class="p">.</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">p1_0</span><span class="p">.</span><span class="n">categorie_id</span><span class="p">,</span><span class="w"> </span><span class="n">p1_0</span><span class="p">.</span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">p1_0</span><span class="p">.</span><span class="n">prix</span>
-<a id="__codelineno-39-5" name="__codelineno-39-5"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">produits</span><span class="w"> </span><span class="n">p1_0</span>
-<a id="__codelineno-39-6" name="__codelineno-39-6"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">p1_0</span><span class="p">.</span><span class="n">nom</span><span class="o">=?</span>
-<a id="__codelineno-39-7" name="__codelineno-39-7"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="c1">-- paramètre 1 = vélo</span>
-<a id="__codelineno-39-8" name="__codelineno-39-8"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">select</span><span class="w"> </span><span class="n">p1_0</span><span class="p">.</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">p1_0</span><span class="p">.</span><span class="n">categorie_id</span><span class="p">,</span><span class="w"> </span><span class="n">p1_0</span><span class="p">.</span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">p1_0</span><span class="p">.</span><span class="n">prix</span>
-<a id="__codelineno-39-9" name="__codelineno-39-9"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">produits</span><span class="w"> </span><span class="n">p1_0</span>
-<a id="__codelineno-39-10" name="__codelineno-39-10"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">p1_0</span><span class="p">.</span><span class="n">nom</span><span class="o">=?</span>
-<a id="__codelineno-39-11" name="__codelineno-39-11"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="c1">-- paramètre 1 = flèches - lot de 6</span>
-<a id="__codelineno-39-12" name="__codelineno-39-12"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">insert</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="n">clients</span><span class="w"> </span><span class="p">(</span><span class="n">nom</span><span class="p">)</span>
-<a id="__codelineno-39-13" name="__codelineno-39-13"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">values</span><span class="w"> </span><span class="p">(</span><span class="o">?</span><span class="p">)</span>
-<a id="__codelineno-39-14" name="__codelineno-39-14"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="c1">-- paramètre 1 = Dupont</span>
-<a id="__codelineno-39-15" name="__codelineno-39-15"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">insert</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="n">commandes</span><span class="w"> </span><span class="p">(</span><span class="n">client_id</span><span class="p">,</span><span class="w"> </span><span class="nb">date</span><span class="p">)</span>
-<a id="__codelineno-39-16" name="__codelineno-39-16"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">values</span><span class="w"> </span><span class="p">(</span><span class="o">?</span><span class="p">,</span><span class="w"> </span><span class="o">?</span><span class="p">)</span>
-<a id="__codelineno-39-17" name="__codelineno-39-17"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="c1">-- paramètre 1 = 2</span>
-<a id="__codelineno-39-18" name="__codelineno-39-18"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="c1">-- paramètre 2 = 2026-10-01</span>
-<a id="__codelineno-39-19" name="__codelineno-39-19"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">insert</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="n">lignes_commande</span><span class="w"> </span><span class="p">(</span><span class="n">commande_id</span><span class="p">,</span><span class="w"> </span><span class="n">produit_id</span><span class="p">,</span><span class="w"> </span><span class="n">quantite</span><span class="p">)</span>
-<a id="__codelineno-39-20" name="__codelineno-39-20"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">values</span><span class="w"> </span><span class="p">(</span><span class="o">?</span><span class="p">,</span><span class="w"> </span><span class="o">?</span><span class="p">,</span><span class="w"> </span><span class="o">?</span><span class="p">)</span>
-<a id="__codelineno-39-21" name="__codelineno-39-21"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="c1">-- paramètre 1 = 2</span>
-<a id="__codelineno-39-22" name="__codelineno-39-22"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="c1">-- paramètre 2 = 1</span>
-<a id="__codelineno-39-23" name="__codelineno-39-23"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="c1">-- paramètre 3 = 1</span>
-<a id="__codelineno-39-24" name="__codelineno-39-24"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">insert</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="n">lignes_commande</span><span class="w"> </span><span class="p">(</span><span class="n">commande_id</span><span class="p">,</span><span class="w"> </span><span class="n">produit_id</span><span class="p">,</span><span class="w"> </span><span class="n">quantite</span><span class="p">)</span>
-<a id="__codelineno-39-25" name="__codelineno-39-25"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">values</span><span class="w"> </span><span class="p">(</span><span class="o">?</span><span class="p">,</span><span class="w"> </span><span class="o">?</span><span class="p">,</span><span class="w"> </span><span class="o">?</span><span class="p">)</span>
-<a id="__codelineno-39-26" name="__codelineno-39-26"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="c1">-- paramètre 1 = 2</span>
-<a id="__codelineno-39-27" name="__codelineno-39-27"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="c1">-- paramètre 2 = 4</span>
-<a id="__codelineno-39-28" name="__codelineno-39-28"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="c1">-- paramètre 3 = 3</span>
-<a id="__codelineno-39-29" name="__codelineno-39-29"></a><span class="n">client</span><span class="w"> </span><span class="n">n</span><span class="err">°</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">commande</span><span class="w"> </span><span class="n">n</span><span class="err">°</span><span class="w"> </span><span class="mi">2</span>
-<a id="__codelineno-39-30" name="__codelineno-39-30"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="c1">-- transaction validée (COMMIT)</span>
-<a id="__codelineno-39-31" name="__codelineno-39-31"></a><span class="c1">--- chargement paresseux</span>
-<a id="__codelineno-39-32" name="__codelineno-39-32"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">select</span><span class="w"> </span><span class="n">c1_0</span><span class="p">.</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">c1_0</span><span class="p">.</span><span class="n">client_id</span><span class="p">,</span><span class="w"> </span><span class="n">c1_0</span><span class="p">.</span><span class="nb">date</span>
-<a id="__codelineno-39-33" name="__codelineno-39-33"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">commandes</span><span class="w"> </span><span class="n">c1_0</span>
-<a id="__codelineno-39-34" name="__codelineno-39-34"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">order</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">c1_0</span><span class="p">.</span><span class="n">id</span>
-<a id="__codelineno-39-35" name="__codelineno-39-35"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">select</span><span class="w"> </span><span class="n">c1_0</span><span class="p">.</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">c1_0</span><span class="p">.</span><span class="n">nom</span>
-<a id="__codelineno-39-36" name="__codelineno-39-36"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">clients</span><span class="w"> </span><span class="n">c1_0</span>
-<a id="__codelineno-39-37" name="__codelineno-39-37"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">c1_0</span><span class="p">.</span><span class="n">id</span><span class="o">=?</span>
-<a id="__codelineno-39-38" name="__codelineno-39-38"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="c1">-- paramètre 1 = 1</span>
-<a id="__codelineno-39-39" name="__codelineno-39-39"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">select</span><span class="w"> </span><span class="n">l1_0</span><span class="p">.</span><span class="n">commande_id</span><span class="p">,</span><span class="w"> </span><span class="n">l1_0</span><span class="p">.</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">l1_0</span><span class="p">.</span><span class="n">produit_id</span><span class="p">,</span><span class="w"> </span><span class="n">l1_0</span><span class="p">.</span><span class="n">quantite</span>
-<a id="__codelineno-39-40" name="__codelineno-39-40"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">lignes_commande</span><span class="w"> </span><span class="n">l1_0</span>
-<a id="__codelineno-39-41" name="__codelineno-39-41"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">l1_0</span><span class="p">.</span><span class="n">commande_id</span><span class="o">=?</span>
-<a id="__codelineno-39-42" name="__codelineno-39-42"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="c1">-- paramètre 1 = 1</span>
-<a id="__codelineno-39-43" name="__codelineno-39-43"></a><span class="n">commande</span><span class="w"> </span><span class="n">n</span><span class="err">°</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">client</span><span class="o">=</span><span class="n">Martin</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="n">ligne</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
-<a id="__codelineno-39-44" name="__codelineno-39-44"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">select</span><span class="w"> </span><span class="n">c1_0</span><span class="p">.</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">c1_0</span><span class="p">.</span><span class="n">nom</span>
-<a id="__codelineno-39-45" name="__codelineno-39-45"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">clients</span><span class="w"> </span><span class="n">c1_0</span>
-<a id="__codelineno-39-46" name="__codelineno-39-46"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">c1_0</span><span class="p">.</span><span class="n">id</span><span class="o">=?</span>
-<a id="__codelineno-39-47" name="__codelineno-39-47"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="c1">-- paramètre 1 = 2</span>
-<a id="__codelineno-39-48" name="__codelineno-39-48"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">select</span><span class="w"> </span><span class="n">l1_0</span><span class="p">.</span><span class="n">commande_id</span><span class="p">,</span><span class="w"> </span><span class="n">l1_0</span><span class="p">.</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">l1_0</span><span class="p">.</span><span class="n">produit_id</span><span class="p">,</span><span class="w"> </span><span class="n">l1_0</span><span class="p">.</span><span class="n">quantite</span>
-<a id="__codelineno-39-49" name="__codelineno-39-49"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">lignes_commande</span><span class="w"> </span><span class="n">l1_0</span>
-<a id="__codelineno-39-50" name="__codelineno-39-50"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">l1_0</span><span class="p">.</span><span class="n">commande_id</span><span class="o">=?</span>
-<a id="__codelineno-39-51" name="__codelineno-39-51"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="c1">-- paramètre 1 = 2</span>
-<a id="__codelineno-39-52" name="__codelineno-39-52"></a><span class="n">commande</span><span class="w"> </span><span class="n">n</span><span class="err">°</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">client</span><span class="o">=</span><span class="n">Dupont</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="n">ligne</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
-<a id="__codelineno-39-53" name="__codelineno-39-53"></a><span class="n">classe</span><span class="w"> </span><span class="n">du</span><span class="w"> </span><span class="n">client</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">relations</span><span class="p">.</span><span class="n">Client$HibernateProxy</span>
-<a id="__codelineno-39-54" name="__codelineno-39-54"></a><span class="c1">--- après la fermeture de la session</span>
-<a id="__codelineno-39-55" name="__codelineno-39-55"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">select</span><span class="w"> </span><span class="n">c1_0</span><span class="p">.</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">c1_0</span><span class="p">.</span><span class="n">client_id</span><span class="p">,</span><span class="w"> </span><span class="n">c1_0</span><span class="p">.</span><span class="nb">date</span>
-<a id="__codelineno-39-56" name="__codelineno-39-56"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">commandes</span><span class="w"> </span><span class="n">c1_0</span>
-<a id="__codelineno-39-57" name="__codelineno-39-57"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">c1_0</span><span class="p">.</span><span class="n">id</span><span class="o">=?</span>
-<a id="__codelineno-39-58" name="__codelineno-39-58"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="c1">-- paramètre 1 = 1</span>
-<a id="__codelineno-39-59" name="__codelineno-39-59"></a><span class="n">LazyInitializationException</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Cannot</span><span class="w"> </span><span class="n">lazily</span><span class="w"> </span><span class="k">initialize</span><span class="w"> </span><span class="n">collection</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="k">role</span><span class="w"> </span><span class="s1">'relations.Commande.lignes'</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="k">key</span><span class="w"> </span><span class="s1">'1'</span><span class="w"> </span><span class="p">(</span><span class="k">no</span><span class="w"> </span><span class="k">session</span><span class="p">)</span>
-<a id="__codelineno-39-60" name="__codelineno-39-60"></a><span class="c1">--- join fetch</span>
-<a id="__codelineno-39-61" name="__codelineno-39-61"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">select</span>
-<a id="__codelineno-39-62" name="__codelineno-39-62"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w">     </span><span class="n">c1_0</span><span class="p">.</span><span class="n">id</span><span class="p">,</span>
-<a id="__codelineno-39-63" name="__codelineno-39-63"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w">     </span><span class="n">c1_0</span><span class="p">.</span><span class="n">client_id</span><span class="p">,</span>
-<a id="__codelineno-39-64" name="__codelineno-39-64"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w">     </span><span class="n">c2_0</span><span class="p">.</span><span class="n">id</span><span class="p">,</span>
-<a id="__codelineno-39-65" name="__codelineno-39-65"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w">     </span><span class="n">c2_0</span><span class="p">.</span><span class="n">nom</span><span class="p">,</span>
-<a id="__codelineno-39-66" name="__codelineno-39-66"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w">     </span><span class="n">c1_0</span><span class="p">.</span><span class="nb">date</span><span class="p">,</span>
-<a id="__codelineno-39-67" name="__codelineno-39-67"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w">     </span><span class="n">l1_0</span><span class="p">.</span><span class="n">commande_id</span><span class="p">,</span>
-<a id="__codelineno-39-68" name="__codelineno-39-68"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w">     </span><span class="n">l1_0</span><span class="p">.</span><span class="n">id</span><span class="p">,</span>
-<a id="__codelineno-39-69" name="__codelineno-39-69"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w">     </span><span class="n">l1_0</span><span class="p">.</span><span class="n">produit_id</span><span class="p">,</span>
-<a id="__codelineno-39-70" name="__codelineno-39-70"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w">     </span><span class="n">p1_0</span><span class="p">.</span><span class="n">id</span><span class="p">,</span>
-<a id="__codelineno-39-71" name="__codelineno-39-71"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w">     </span><span class="n">p1_0</span><span class="p">.</span><span class="n">categorie_id</span><span class="p">,</span>
-<a id="__codelineno-39-72" name="__codelineno-39-72"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w">     </span><span class="n">p1_0</span><span class="p">.</span><span class="n">nom</span><span class="p">,</span>
-<a id="__codelineno-39-73" name="__codelineno-39-73"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w">     </span><span class="n">p1_0</span><span class="p">.</span><span class="n">prix</span><span class="p">,</span>
-<a id="__codelineno-39-74" name="__codelineno-39-74"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w">     </span><span class="n">l1_0</span><span class="p">.</span><span class="n">quantite</span>
-<a id="__codelineno-39-75" name="__codelineno-39-75"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">commandes</span><span class="w"> </span><span class="n">c1_0</span>
-<a id="__codelineno-39-76" name="__codelineno-39-76"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">join</span><span class="w"> </span><span class="n">clients</span><span class="w"> </span><span class="n">c2_0</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">c2_0</span><span class="p">.</span><span class="n">id</span><span class="o">=</span><span class="n">c1_0</span><span class="p">.</span><span class="n">client_id</span>
-<a id="__codelineno-39-77" name="__codelineno-39-77"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">join</span><span class="w"> </span><span class="n">lignes_commande</span><span class="w"> </span><span class="n">l1_0</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">c1_0</span><span class="p">.</span><span class="n">id</span><span class="o">=</span><span class="n">l1_0</span><span class="p">.</span><span class="n">commande_id</span>
-<a id="__codelineno-39-78" name="__codelineno-39-78"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">join</span><span class="w"> </span><span class="n">produits</span><span class="w"> </span><span class="n">p1_0</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">p1_0</span><span class="p">.</span><span class="n">id</span><span class="o">=</span><span class="n">l1_0</span><span class="p">.</span><span class="n">produit_id</span>
-<a id="__codelineno-39-79" name="__codelineno-39-79"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">order</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">c1_0</span><span class="p">.</span><span class="n">id</span>
-<a id="__codelineno-39-80" name="__codelineno-39-80"></a><span class="n">commande</span><span class="w"> </span><span class="n">n</span><span class="err">°</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="n">du</span><span class="w"> </span><span class="mi">2026</span><span class="o">-</span><span class="mi">09</span><span class="o">-</span><span class="mi">28</span><span class="w"> </span><span class="n">pour</span><span class="w"> </span><span class="n">Martin</span>
-<a id="__codelineno-39-81" name="__codelineno-39-81"></a><span class="w">  </span><span class="mi">2</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">pompe</span><span class="w"> </span><span class="err">à</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="mi">00</span><span class="w"> </span><span class="n">euros</span>
-<a id="__codelineno-39-82" name="__codelineno-39-82"></a><span class="w">  </span><span class="mi">1</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">arc</span><span class="w"> </span><span class="err">à</span><span class="w"> </span><span class="mi">600</span><span class="p">,</span><span class="mi">00</span><span class="w"> </span><span class="n">euros</span>
-<a id="__codelineno-39-83" name="__codelineno-39-83"></a><span class="n">commande</span><span class="w"> </span><span class="n">n</span><span class="err">°</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="n">du</span><span class="w"> </span><span class="mi">2026</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">01</span><span class="w"> </span><span class="n">pour</span><span class="w"> </span><span class="n">Dupont</span>
-<a id="__codelineno-39-84" name="__codelineno-39-84"></a><span class="w">  </span><span class="mi">1</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">vélo</span><span class="w"> </span><span class="err">à</span><span class="w"> </span><span class="mi">500</span><span class="p">,</span><span class="mi">00</span><span class="w"> </span><span class="n">euros</span>
-<a id="__codelineno-39-85" name="__codelineno-39-85"></a><span class="w">  </span><span class="mi">3</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">flèches</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">lot</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="err">à</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="mi">00</span><span class="w"> </span><span class="n">euros</span>
-<a id="__codelineno-39-86" name="__codelineno-39-86"></a><span class="c1">--- graphe d'entités</span>
-<a id="__codelineno-39-87" name="__codelineno-39-87"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">select</span><span class="w"> </span><span class="n">c1_0</span><span class="p">.</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">c1_0</span><span class="p">.</span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">p1_0</span><span class="p">.</span><span class="n">categorie_id</span><span class="p">,</span><span class="w"> </span><span class="n">p1_0</span><span class="p">.</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">p1_0</span><span class="p">.</span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">p1_0</span><span class="p">.</span><span class="n">prix</span>
-<a id="__codelineno-39-88" name="__codelineno-39-88"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">categories</span><span class="w"> </span><span class="n">c1_0</span>
-<a id="__codelineno-39-89" name="__codelineno-39-89"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">left</span><span class="w"> </span><span class="k">join</span><span class="w"> </span><span class="n">produits</span><span class="w"> </span><span class="n">p1_0</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">c1_0</span><span class="p">.</span><span class="n">id</span><span class="o">=</span><span class="n">p1_0</span><span class="p">.</span><span class="n">categorie_id</span>
-<a id="__codelineno-39-90" name="__codelineno-39-90"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">c1_0</span><span class="p">.</span><span class="n">id</span><span class="o">=?</span>
-<a id="__codelineno-39-91" name="__codelineno-39-91"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="c1">-- paramètre 1 = 2</span>
-<a id="__codelineno-39-92" name="__codelineno-39-92"></a><span class="n">tir</span><span class="w"> </span><span class="err">à</span><span class="w"> </span><span class="n">l</span><span class="s1">'arc : arc, flèches - lot de 6</span>
-<a id="__codelineno-39-93" name="__codelineno-39-93"></a><span class="s1">--- les produits en promotion</span>
-<a id="__codelineno-39-94" name="__codelineno-39-94"></a><span class="s1">    SQL&gt; select p1_0.nom, c1_0.nom</span>
-<a id="__codelineno-39-95" name="__codelineno-39-95"></a><span class="s1">    SQL&gt; from produits p1_0</span>
-<a id="__codelineno-39-96" name="__codelineno-39-96"></a><span class="s1">    SQL&gt; join produits_etiquettes e1_0 on p1_0.id=e1_0.produit_id</span>
-<a id="__codelineno-39-97" name="__codelineno-39-97"></a><span class="s1">    SQL&gt; join etiquettes e1_1 on e1_1.id=e1_0.etiquette_id</span>
-<a id="__codelineno-39-98" name="__codelineno-39-98"></a><span class="s1">    SQL&gt; join categories c1_0 on c1_0.id=p1_0.categorie_id</span>
-<a id="__codelineno-39-99" name="__codelineno-39-99"></a><span class="s1">    SQL&gt; where e1_1.libelle=?</span>
-<a id="__codelineno-39-100" name="__codelineno-39-100"></a><span class="s1">    SQL&gt; order by p1_0.nom</span>
-<a id="__codelineno-39-101" name="__codelineno-39-101"></a><span class="s1">    SQL&gt; -- paramètre 1 = promo</span>
-<a id="__codelineno-39-102" name="__codelineno-39-102"></a><span class="s1">flèches - lot de 6 (tir à l'</span><span class="n">arc</span><span class="p">)</span>
-<a id="__codelineno-39-103" name="__codelineno-39-103"></a><span class="n">vélo</span><span class="w"> </span><span class="p">(</span><span class="n">cycles</span><span class="p">)</span>
-<a id="__codelineno-39-104" name="__codelineno-39-104"></a><span class="c1">--- montant des commandes</span>
-<a id="__codelineno-39-105" name="__codelineno-39-105"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">select</span><span class="w"> </span><span class="n">c1_0</span><span class="p">.</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">c2_0</span><span class="p">.</span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="k">sum</span><span class="p">((</span><span class="n">l1_0</span><span class="p">.</span><span class="n">quantite</span><span class="o">*</span><span class="n">p1_0</span><span class="p">.</span><span class="n">prix</span><span class="p">))</span>
-<a id="__codelineno-39-106" name="__codelineno-39-106"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">commandes</span><span class="w"> </span><span class="n">c1_0</span>
-<a id="__codelineno-39-107" name="__codelineno-39-107"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">join</span><span class="w"> </span><span class="n">lignes_commande</span><span class="w"> </span><span class="n">l1_0</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">c1_0</span><span class="p">.</span><span class="n">id</span><span class="o">=</span><span class="n">l1_0</span><span class="p">.</span><span class="n">commande_id</span>
-<a id="__codelineno-39-108" name="__codelineno-39-108"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">join</span><span class="w"> </span><span class="n">produits</span><span class="w"> </span><span class="n">p1_0</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">p1_0</span><span class="p">.</span><span class="n">id</span><span class="o">=</span><span class="n">l1_0</span><span class="p">.</span><span class="n">produit_id</span>
-<a id="__codelineno-39-109" name="__codelineno-39-109"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">join</span><span class="w"> </span><span class="n">clients</span><span class="w"> </span><span class="n">c2_0</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">c2_0</span><span class="p">.</span><span class="n">id</span><span class="o">=</span><span class="n">c1_0</span><span class="p">.</span><span class="n">client_id</span>
-<a id="__codelineno-39-110" name="__codelineno-39-110"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">group</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">c1_0</span><span class="p">.</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">c2_0</span><span class="p">.</span><span class="n">nom</span>
-<a id="__codelineno-39-111" name="__codelineno-39-111"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">order</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">c1_0</span><span class="p">.</span><span class="n">id</span>
-<a id="__codelineno-39-112" name="__codelineno-39-112"></a><span class="n">commande</span><span class="w"> </span><span class="n">n</span><span class="err">°</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">(</span><span class="n">Martin</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">620</span><span class="p">,</span><span class="mi">00</span><span class="w"> </span><span class="n">euros</span>
-<a id="__codelineno-39-113" name="__codelineno-39-113"></a><span class="n">commande</span><span class="w"> </span><span class="n">n</span><span class="err">°</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">(</span><span class="n">Dupont</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">800</span><span class="p">,</span><span class="mi">00</span><span class="w"> </span><span class="n">euros</span>
-<a id="__codelineno-39-114" name="__codelineno-39-114"></a><span class="c1">--- produits par catégorie</span>
-<a id="__codelineno-39-115" name="__codelineno-39-115"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">select</span><span class="w"> </span><span class="n">c1_0</span><span class="p">.</span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="k">count</span><span class="p">(</span><span class="o">*</span><span class="p">),</span><span class="w"> </span><span class="k">avg</span><span class="p">(</span><span class="n">p1_0</span><span class="p">.</span><span class="n">prix</span><span class="p">)</span>
-<a id="__codelineno-39-116" name="__codelineno-39-116"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">produits</span><span class="w"> </span><span class="n">p1_0</span>
-<a id="__codelineno-39-117" name="__codelineno-39-117"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">join</span><span class="w"> </span><span class="n">categories</span><span class="w"> </span><span class="n">c1_0</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">c1_0</span><span class="p">.</span><span class="n">id</span><span class="o">=</span><span class="n">p1_0</span><span class="p">.</span><span class="n">categorie_id</span>
-<a id="__codelineno-39-118" name="__codelineno-39-118"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">group</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">c1_0</span><span class="p">.</span><span class="n">nom</span>
-<a id="__codelineno-39-119" name="__codelineno-39-119"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">order</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">c1_0</span><span class="p">.</span><span class="n">nom</span>
-<a id="__codelineno-39-120" name="__codelineno-39-120"></a><span class="n">cycles</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="n">produit</span><span class="p">(</span><span class="n">s</span><span class="p">),</span><span class="w"> </span><span class="n">prix</span><span class="w"> </span><span class="n">moyen</span><span class="w"> </span><span class="mi">255</span><span class="p">,</span><span class="mi">00</span><span class="w"> </span><span class="n">euros</span>
-<a id="__codelineno-39-121" name="__codelineno-39-121"></a><span class="n">tir</span><span class="w"> </span><span class="err">à</span><span class="w"> </span><span class="n">l</span><span class="err">'</span><span class="n">arc</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="n">produit</span><span class="p">(</span><span class="n">s</span><span class="p">),</span><span class="w"> </span><span class="n">prix</span><span class="w"> </span><span class="n">moyen</span><span class="w"> </span><span class="mi">350</span><span class="p">,</span><span class="mi">00</span><span class="w"> </span><span class="n">euros</span>
+<span class="normal"><a href="#__codelineno-39-121">121</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1"></a>&gt; gradlew -q :relations:run
+<a id="__codelineno-39-2" name="__codelineno-39-2"></a>--- ajout d'un client, d'une commande et de ses deux lignes
+<a id="__codelineno-39-3" name="__codelineno-39-3"></a>    SQL&gt; -- début de transaction
+<a id="__codelineno-39-4" name="__codelineno-39-4"></a>    SQL&gt; select p1_0.id, p1_0.categorie_id, p1_0.nom, p1_0.prix
+<a id="__codelineno-39-5" name="__codelineno-39-5"></a>    SQL&gt; from produits p1_0
+<a id="__codelineno-39-6" name="__codelineno-39-6"></a>    SQL&gt; where p1_0.nom=?
+<a id="__codelineno-39-7" name="__codelineno-39-7"></a>    SQL&gt; -- paramètre 1 = vélo
+<a id="__codelineno-39-8" name="__codelineno-39-8"></a>    SQL&gt; select p1_0.id, p1_0.categorie_id, p1_0.nom, p1_0.prix
+<a id="__codelineno-39-9" name="__codelineno-39-9"></a>    SQL&gt; from produits p1_0
+<a id="__codelineno-39-10" name="__codelineno-39-10"></a>    SQL&gt; where p1_0.nom=?
+<a id="__codelineno-39-11" name="__codelineno-39-11"></a>    SQL&gt; -- paramètre 1 = flèches - lot de 6
+<a id="__codelineno-39-12" name="__codelineno-39-12"></a>    SQL&gt; insert into clients (nom)
+<a id="__codelineno-39-13" name="__codelineno-39-13"></a>    SQL&gt; values (?)
+<a id="__codelineno-39-14" name="__codelineno-39-14"></a>    SQL&gt; -- paramètre 1 = Dupont
+<a id="__codelineno-39-15" name="__codelineno-39-15"></a>    SQL&gt; insert into commandes (client_id, date)
+<a id="__codelineno-39-16" name="__codelineno-39-16"></a>    SQL&gt; values (?, ?)
+<a id="__codelineno-39-17" name="__codelineno-39-17"></a>    SQL&gt; -- paramètre 1 = 2
+<a id="__codelineno-39-18" name="__codelineno-39-18"></a>    SQL&gt; -- paramètre 2 = 2026-10-01
+<a id="__codelineno-39-19" name="__codelineno-39-19"></a>    SQL&gt; insert into lignes_commande (commande_id, produit_id, quantite)
+<a id="__codelineno-39-20" name="__codelineno-39-20"></a>    SQL&gt; values (?, ?, ?)
+<a id="__codelineno-39-21" name="__codelineno-39-21"></a>    SQL&gt; -- paramètre 1 = 2
+<a id="__codelineno-39-22" name="__codelineno-39-22"></a>    SQL&gt; -- paramètre 2 = 1
+<a id="__codelineno-39-23" name="__codelineno-39-23"></a>    SQL&gt; -- paramètre 3 = 1
+<a id="__codelineno-39-24" name="__codelineno-39-24"></a>    SQL&gt; insert into lignes_commande (commande_id, produit_id, quantite)
+<a id="__codelineno-39-25" name="__codelineno-39-25"></a>    SQL&gt; values (?, ?, ?)
+<a id="__codelineno-39-26" name="__codelineno-39-26"></a>    SQL&gt; -- paramètre 1 = 2
+<a id="__codelineno-39-27" name="__codelineno-39-27"></a>    SQL&gt; -- paramètre 2 = 4
+<a id="__codelineno-39-28" name="__codelineno-39-28"></a>    SQL&gt; -- paramètre 3 = 3
+<a id="__codelineno-39-29" name="__codelineno-39-29"></a>client n° 2, commande n° 2
+<a id="__codelineno-39-30" name="__codelineno-39-30"></a>    SQL&gt; -- transaction validée (COMMIT)
+<a id="__codelineno-39-31" name="__codelineno-39-31"></a>--- chargement paresseux
+<a id="__codelineno-39-32" name="__codelineno-39-32"></a>    SQL&gt; select c1_0.id, c1_0.client_id, c1_0.date
+<a id="__codelineno-39-33" name="__codelineno-39-33"></a>    SQL&gt; from commandes c1_0
+<a id="__codelineno-39-34" name="__codelineno-39-34"></a>    SQL&gt; order by c1_0.id
+<a id="__codelineno-39-35" name="__codelineno-39-35"></a>    SQL&gt; select c1_0.id, c1_0.nom
+<a id="__codelineno-39-36" name="__codelineno-39-36"></a>    SQL&gt; from clients c1_0
+<a id="__codelineno-39-37" name="__codelineno-39-37"></a>    SQL&gt; where c1_0.id=?
+<a id="__codelineno-39-38" name="__codelineno-39-38"></a>    SQL&gt; -- paramètre 1 = 1
+<a id="__codelineno-39-39" name="__codelineno-39-39"></a>    SQL&gt; select l1_0.commande_id, l1_0.id, l1_0.produit_id, l1_0.quantite
+<a id="__codelineno-39-40" name="__codelineno-39-40"></a>    SQL&gt; from lignes_commande l1_0
+<a id="__codelineno-39-41" name="__codelineno-39-41"></a>    SQL&gt; where l1_0.commande_id=?
+<a id="__codelineno-39-42" name="__codelineno-39-42"></a>    SQL&gt; -- paramètre 1 = 1
+<a id="__codelineno-39-43" name="__codelineno-39-43"></a>commande n° 1 : client=Martin, 2 ligne(s)
+<a id="__codelineno-39-44" name="__codelineno-39-44"></a>    SQL&gt; select c1_0.id, c1_0.nom
+<a id="__codelineno-39-45" name="__codelineno-39-45"></a>    SQL&gt; from clients c1_0
+<a id="__codelineno-39-46" name="__codelineno-39-46"></a>    SQL&gt; where c1_0.id=?
+<a id="__codelineno-39-47" name="__codelineno-39-47"></a>    SQL&gt; -- paramètre 1 = 2
+<a id="__codelineno-39-48" name="__codelineno-39-48"></a>    SQL&gt; select l1_0.commande_id, l1_0.id, l1_0.produit_id, l1_0.quantite
+<a id="__codelineno-39-49" name="__codelineno-39-49"></a>    SQL&gt; from lignes_commande l1_0
+<a id="__codelineno-39-50" name="__codelineno-39-50"></a>    SQL&gt; where l1_0.commande_id=?
+<a id="__codelineno-39-51" name="__codelineno-39-51"></a>    SQL&gt; -- paramètre 1 = 2
+<a id="__codelineno-39-52" name="__codelineno-39-52"></a>commande n° 2 : client=Dupont, 2 ligne(s)
+<a id="__codelineno-39-53" name="__codelineno-39-53"></a>classe du client : relations.Client$HibernateProxy
+<a id="__codelineno-39-54" name="__codelineno-39-54"></a>--- après la fermeture de la session
+<a id="__codelineno-39-55" name="__codelineno-39-55"></a>    SQL&gt; select c1_0.id, c1_0.client_id, c1_0.date
+<a id="__codelineno-39-56" name="__codelineno-39-56"></a>    SQL&gt; from commandes c1_0
+<a id="__codelineno-39-57" name="__codelineno-39-57"></a>    SQL&gt; where c1_0.id=?
+<a id="__codelineno-39-58" name="__codelineno-39-58"></a>    SQL&gt; -- paramètre 1 = 1
+<a id="__codelineno-39-59" name="__codelineno-39-59"></a>LazyInitializationException : Cannot lazily initialize collection of role 'relations.Commande.lignes' with key '1' (no session)
+<a id="__codelineno-39-60" name="__codelineno-39-60"></a>--- join fetch
+<a id="__codelineno-39-61" name="__codelineno-39-61"></a>    SQL&gt; select
+<a id="__codelineno-39-62" name="__codelineno-39-62"></a>    SQL&gt;     c1_0.id,
+<a id="__codelineno-39-63" name="__codelineno-39-63"></a>    SQL&gt;     c1_0.client_id,
+<a id="__codelineno-39-64" name="__codelineno-39-64"></a>    SQL&gt;     c2_0.id,
+<a id="__codelineno-39-65" name="__codelineno-39-65"></a>    SQL&gt;     c2_0.nom,
+<a id="__codelineno-39-66" name="__codelineno-39-66"></a>    SQL&gt;     c1_0.date,
+<a id="__codelineno-39-67" name="__codelineno-39-67"></a>    SQL&gt;     l1_0.commande_id,
+<a id="__codelineno-39-68" name="__codelineno-39-68"></a>    SQL&gt;     l1_0.id,
+<a id="__codelineno-39-69" name="__codelineno-39-69"></a>    SQL&gt;     l1_0.produit_id,
+<a id="__codelineno-39-70" name="__codelineno-39-70"></a>    SQL&gt;     p1_0.id,
+<a id="__codelineno-39-71" name="__codelineno-39-71"></a>    SQL&gt;     p1_0.categorie_id,
+<a id="__codelineno-39-72" name="__codelineno-39-72"></a>    SQL&gt;     p1_0.nom,
+<a id="__codelineno-39-73" name="__codelineno-39-73"></a>    SQL&gt;     p1_0.prix,
+<a id="__codelineno-39-74" name="__codelineno-39-74"></a>    SQL&gt;     l1_0.quantite
+<a id="__codelineno-39-75" name="__codelineno-39-75"></a>    SQL&gt; from commandes c1_0
+<a id="__codelineno-39-76" name="__codelineno-39-76"></a>    SQL&gt; join clients c2_0 on c2_0.id=c1_0.client_id
+<a id="__codelineno-39-77" name="__codelineno-39-77"></a>    SQL&gt; join lignes_commande l1_0 on c1_0.id=l1_0.commande_id
+<a id="__codelineno-39-78" name="__codelineno-39-78"></a>    SQL&gt; join produits p1_0 on p1_0.id=l1_0.produit_id
+<a id="__codelineno-39-79" name="__codelineno-39-79"></a>    SQL&gt; order by c1_0.id
+<a id="__codelineno-39-80" name="__codelineno-39-80"></a>commande n° 1 du 2026-09-28 pour Martin
+<a id="__codelineno-39-81" name="__codelineno-39-81"></a>  2 x pompe à 10,00 euros
+<a id="__codelineno-39-82" name="__codelineno-39-82"></a>  1 x arc à 600,00 euros
+<a id="__codelineno-39-83" name="__codelineno-39-83"></a>commande n° 2 du 2026-10-01 pour Dupont
+<a id="__codelineno-39-84" name="__codelineno-39-84"></a>  1 x vélo à 500,00 euros
+<a id="__codelineno-39-85" name="__codelineno-39-85"></a>  3 x flèches - lot de 6 à 100,00 euros
+<a id="__codelineno-39-86" name="__codelineno-39-86"></a>--- graphe d'entités
+<a id="__codelineno-39-87" name="__codelineno-39-87"></a>    SQL&gt; select c1_0.id, c1_0.nom, p1_0.categorie_id, p1_0.id, p1_0.nom, p1_0.prix
+<a id="__codelineno-39-88" name="__codelineno-39-88"></a>    SQL&gt; from categories c1_0
+<a id="__codelineno-39-89" name="__codelineno-39-89"></a>    SQL&gt; left join produits p1_0 on c1_0.id=p1_0.categorie_id
+<a id="__codelineno-39-90" name="__codelineno-39-90"></a>    SQL&gt; where c1_0.id=?
+<a id="__codelineno-39-91" name="__codelineno-39-91"></a>    SQL&gt; -- paramètre 1 = 2
+<a id="__codelineno-39-92" name="__codelineno-39-92"></a>tir à l'arc : arc, flèches - lot de 6
+<a id="__codelineno-39-93" name="__codelineno-39-93"></a>--- les produits en promotion
+<a id="__codelineno-39-94" name="__codelineno-39-94"></a>    SQL&gt; select p1_0.nom, c1_0.nom
+<a id="__codelineno-39-95" name="__codelineno-39-95"></a>    SQL&gt; from produits p1_0
+<a id="__codelineno-39-96" name="__codelineno-39-96"></a>    SQL&gt; join produits_etiquettes e1_0 on p1_0.id=e1_0.produit_id
+<a id="__codelineno-39-97" name="__codelineno-39-97"></a>    SQL&gt; join etiquettes e1_1 on e1_1.id=e1_0.etiquette_id
+<a id="__codelineno-39-98" name="__codelineno-39-98"></a>    SQL&gt; join categories c1_0 on c1_0.id=p1_0.categorie_id
+<a id="__codelineno-39-99" name="__codelineno-39-99"></a>    SQL&gt; where e1_1.libelle=?
+<a id="__codelineno-39-100" name="__codelineno-39-100"></a>    SQL&gt; order by p1_0.nom
+<a id="__codelineno-39-101" name="__codelineno-39-101"></a>    SQL&gt; -- paramètre 1 = promo
+<a id="__codelineno-39-102" name="__codelineno-39-102"></a>flèches - lot de 6 (tir à l'arc)
+<a id="__codelineno-39-103" name="__codelineno-39-103"></a>vélo (cycles)
+<a id="__codelineno-39-104" name="__codelineno-39-104"></a>--- montant des commandes
+<a id="__codelineno-39-105" name="__codelineno-39-105"></a>    SQL&gt; select c1_0.id, c2_0.nom, sum((l1_0.quantite*p1_0.prix))
+<a id="__codelineno-39-106" name="__codelineno-39-106"></a>    SQL&gt; from commandes c1_0
+<a id="__codelineno-39-107" name="__codelineno-39-107"></a>    SQL&gt; join lignes_commande l1_0 on c1_0.id=l1_0.commande_id
+<a id="__codelineno-39-108" name="__codelineno-39-108"></a>    SQL&gt; join produits p1_0 on p1_0.id=l1_0.produit_id
+<a id="__codelineno-39-109" name="__codelineno-39-109"></a>    SQL&gt; join clients c2_0 on c2_0.id=c1_0.client_id
+<a id="__codelineno-39-110" name="__codelineno-39-110"></a>    SQL&gt; group by c1_0.id, c2_0.nom
+<a id="__codelineno-39-111" name="__codelineno-39-111"></a>    SQL&gt; order by c1_0.id
+<a id="__codelineno-39-112" name="__codelineno-39-112"></a>commande n° 1 (Martin) : 620,00 euros
+<a id="__codelineno-39-113" name="__codelineno-39-113"></a>commande n° 2 (Dupont) : 800,00 euros
+<a id="__codelineno-39-114" name="__codelineno-39-114"></a>--- produits par catégorie
+<a id="__codelineno-39-115" name="__codelineno-39-115"></a>    SQL&gt; select c1_0.nom, count(*), avg(p1_0.prix)
+<a id="__codelineno-39-116" name="__codelineno-39-116"></a>    SQL&gt; from produits p1_0
+<a id="__codelineno-39-117" name="__codelineno-39-117"></a>    SQL&gt; join categories c1_0 on c1_0.id=p1_0.categorie_id
+<a id="__codelineno-39-118" name="__codelineno-39-118"></a>    SQL&gt; group by c1_0.nom
+<a id="__codelineno-39-119" name="__codelineno-39-119"></a>    SQL&gt; order by c1_0.nom
+<a id="__codelineno-39-120" name="__codelineno-39-120"></a>cycles : 2 produit(s), prix moyen 255,00 euros
+<a id="__codelineno-39-121" name="__codelineno-39-121"></a>tir à l'arc : 2 produit(s), prix moyen 350,00 euros
 </code></pre></div></td></tr></table></div>
 <p>Commentaires :</p>
 <ul>
@@ -5657,11 +5657,11 @@
 <span class="normal"><a href="#__codelineno-40-2">2</a></span>
 <span class="normal"><a href="#__codelineno-40-3">3</a></span>
 <span class="normal"><a href="#__codelineno-40-4">4</a></span>
-<span class="normal"><a href="#__codelineno-40-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1"></a>application {
-<a id="__codelineno-40-2" name="__codelineno-40-2"></a>    // le programme exécuté par [gradlew -q :clients:run] : clients.MainKt par défaut,
-<a id="__codelineno-40-3" name="__codelineno-40-3"></a>    // ou celui désigné par la propriété [main] : gradlew -q :clients:run -Pmain=clients.GenerationScriptKt
-<a id="__codelineno-40-4" name="__codelineno-40-4"></a>    mainClass = providers.gradleProperty("main").orElse("clients.MainKt")
-<a id="__codelineno-40-5" name="__codelineno-40-5"></a>}
+<span class="normal"><a href="#__codelineno-40-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1"></a><span class="n">application</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-40-2" name="__codelineno-40-2"></a><span class="w">    </span><span class="c1">// le programme exécuté par [gradlew -q :clients:run] : clients.MainKt par défaut,</span>
+<a id="__codelineno-40-3" name="__codelineno-40-3"></a><span class="w">    </span><span class="c1">// ou celui désigné par la propriété [main] : gradlew -q :clients:run -Pmain=clients.GenerationScriptKt</span>
+<a id="__codelineno-40-4" name="__codelineno-40-4"></a><span class="w">    </span><span class="n">mainClass</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">providers</span><span class="p">.</span><span class="na">gradleProperty</span><span class="p">(</span><span class="s">"main"</span><span class="p">).</span><span class="na">orElse</span><span class="p">(</span><span class="s">"clients.MainKt"</span><span class="p">)</span>
+<a id="__codelineno-40-5" name="__codelineno-40-5"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>L&#x27;entité est un client :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-41-1"> 1</a></span>
@@ -6812,56 +6812,56 @@
 <span class="normal"><a href="#__codelineno-57-47">47</a></span>
 <span class="normal"><a href="#__codelineno-57-48">48</a></span>
 <span class="normal"><a href="#__codelineno-57-49">49</a></span>
-<span class="normal"><a href="#__codelineno-57-50">50</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-57-1" name="__codelineno-57-1"></a><span class="o">&gt;</span><span class="w"> </span><span class="n">gradlew</span><span class="w"> </span><span class="o">-</span><span class="n">q</span><span class="w"> </span><span class="p">:</span><span class="n">transactions</span><span class="p">:</span><span class="n">run</span>
-<a id="__codelineno-57-2" name="__codelineno-57-2"></a><span class="c1">--- deux ajouts dont le second viole l'unicité du nom</span>
-<a id="__codelineno-57-3" name="__codelineno-57-3"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="c1">-- début de transaction</span>
-<a id="__codelineno-57-4" name="__codelineno-57-4"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">insert</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="n">articles</span><span class="w"> </span><span class="p">(</span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">prix</span><span class="p">,</span><span class="w"> </span><span class="n">stockActuel</span><span class="p">,</span><span class="w"> </span><span class="n">stockMinimum</span><span class="p">)</span>
-<a id="__codelineno-57-5" name="__codelineno-57-5"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">values</span><span class="w"> </span><span class="p">(</span><span class="o">?</span><span class="p">,</span><span class="w"> </span><span class="o">?</span><span class="p">,</span><span class="w"> </span><span class="o">?</span><span class="p">,</span><span class="w"> </span><span class="o">?</span><span class="p">)</span>
-<a id="__codelineno-57-6" name="__codelineno-57-6"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="c1">-- paramètre 1 = raquette</span>
-<a id="__codelineno-57-7" name="__codelineno-57-7"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="c1">-- paramètre 2 = 80</span>
-<a id="__codelineno-57-8" name="__codelineno-57-8"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="c1">-- paramètre 3 = 5</span>
-<a id="__codelineno-57-9" name="__codelineno-57-9"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="c1">-- paramètre 4 = 2</span>
-<a id="__codelineno-57-10" name="__codelineno-57-10"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">insert</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="n">articles</span><span class="w"> </span><span class="p">(</span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">prix</span><span class="p">,</span><span class="w"> </span><span class="n">stockActuel</span><span class="p">,</span><span class="w"> </span><span class="n">stockMinimum</span><span class="p">)</span>
-<a id="__codelineno-57-11" name="__codelineno-57-11"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">values</span><span class="w"> </span><span class="p">(</span><span class="o">?</span><span class="p">,</span><span class="w"> </span><span class="o">?</span><span class="p">,</span><span class="w"> </span><span class="o">?</span><span class="p">,</span><span class="w"> </span><span class="o">?</span><span class="p">)</span>
-<a id="__codelineno-57-12" name="__codelineno-57-12"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="c1">-- paramètre 1 = vélo</span>
-<a id="__codelineno-57-13" name="__codelineno-57-13"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="c1">-- paramètre 2 = 450</span>
-<a id="__codelineno-57-14" name="__codelineno-57-14"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="c1">-- paramètre 3 = 3</span>
-<a id="__codelineno-57-15" name="__codelineno-57-15"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="c1">-- paramètre 4 = 1</span>
-<a id="__codelineno-57-16" name="__codelineno-57-16"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="c1">-- échec : Duplicate entry 'vélo' for key 'articles.uk_articles_nom'</span>
-<a id="__codelineno-57-17" name="__codelineno-57-17"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="c1">-- transaction annulée (ROLLBACK)</span>
-<a id="__codelineno-57-18" name="__codelineno-57-18"></a><span class="n">ConstraintViolationException</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">contrainte</span><span class="w"> </span><span class="p">[</span><span class="n">articles</span><span class="p">.</span><span class="n">uk_articles_nom</span><span class="p">]</span><span class="w"> </span><span class="n">violée</span>
-<a id="__codelineno-57-19" name="__codelineno-57-19"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">select</span><span class="w"> </span><span class="n">a1_0</span><span class="p">.</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">a1_0</span><span class="p">.</span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">a1_0</span><span class="p">.</span><span class="n">prix</span><span class="p">,</span><span class="w"> </span><span class="n">a1_0</span><span class="p">.</span><span class="n">stockActuel</span><span class="p">,</span><span class="w"> </span><span class="n">a1_0</span><span class="p">.</span><span class="n">stockMinimum</span>
-<a id="__codelineno-57-20" name="__codelineno-57-20"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">articles</span><span class="w"> </span><span class="n">a1_0</span>
-<a id="__codelineno-57-21" name="__codelineno-57-21"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">a1_0</span><span class="p">.</span><span class="n">nom</span><span class="o">=?</span>
-<a id="__codelineno-57-22" name="__codelineno-57-22"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="c1">-- paramètre 1 = raquette</span>
-<a id="__codelineno-57-23" name="__codelineno-57-23"></a><span class="n">article</span><span class="w"> </span><span class="p">[</span><span class="n">raquette</span><span class="p">]</span><span class="w"> </span><span class="n">dans</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="n">base</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">absent</span>
-<a id="__codelineno-57-24" name="__codelineno-57-24"></a><span class="c1">--- transaction annulée</span>
-<a id="__codelineno-57-25" name="__codelineno-57-25"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="c1">-- début de transaction</span>
-<a id="__codelineno-57-26" name="__codelineno-57-26"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">select</span><span class="w"> </span><span class="n">a1_0</span><span class="p">.</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">a1_0</span><span class="p">.</span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">a1_0</span><span class="p">.</span><span class="n">prix</span><span class="p">,</span><span class="w"> </span><span class="n">a1_0</span><span class="p">.</span><span class="n">stockActuel</span><span class="p">,</span><span class="w"> </span><span class="n">a1_0</span><span class="p">.</span><span class="n">stockMinimum</span>
-<a id="__codelineno-57-27" name="__codelineno-57-27"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">articles</span><span class="w"> </span><span class="n">a1_0</span>
-<a id="__codelineno-57-28" name="__codelineno-57-28"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">a1_0</span><span class="p">.</span><span class="n">nom</span><span class="o">=</span><span class="s1">'vélo'</span>
-<a id="__codelineno-57-29" name="__codelineno-57-29"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">update</span><span class="w"> </span><span class="n">articles</span>
-<a id="__codelineno-57-30" name="__codelineno-57-30"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">set</span><span class="w"> </span><span class="n">nom</span><span class="o">=?</span><span class="p">,</span><span class="w"> </span><span class="n">prix</span><span class="o">=?</span><span class="p">,</span><span class="w"> </span><span class="n">stockActuel</span><span class="o">=?</span><span class="p">,</span><span class="w"> </span><span class="n">stockMinimum</span><span class="o">=?</span>
-<a id="__codelineno-57-31" name="__codelineno-57-31"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">id</span><span class="o">=?</span>
-<a id="__codelineno-57-32" name="__codelineno-57-32"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="c1">-- paramètre 1 = vélo</span>
-<a id="__codelineno-57-33" name="__codelineno-57-33"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="c1">-- paramètre 2 = 500.00</span>
-<a id="__codelineno-57-34" name="__codelineno-57-34"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="c1">-- paramètre 3 = 8</span>
-<a id="__codelineno-57-35" name="__codelineno-57-35"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="c1">-- paramètre 4 = 5</span>
-<a id="__codelineno-57-36" name="__codelineno-57-36"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="c1">-- paramètre 5 = 1</span>
-<a id="__codelineno-57-37" name="__codelineno-57-37"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">insert</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="n">articles</span><span class="w"> </span><span class="p">(</span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">prix</span><span class="p">,</span><span class="w"> </span><span class="n">stockActuel</span><span class="p">,</span><span class="w"> </span><span class="n">stockMinimum</span><span class="p">)</span>
-<a id="__codelineno-57-38" name="__codelineno-57-38"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">values</span><span class="w"> </span><span class="p">(</span><span class="o">?</span><span class="p">,</span><span class="w"> </span><span class="o">?</span><span class="p">,</span><span class="w"> </span><span class="o">?</span><span class="p">,</span><span class="w"> </span><span class="o">?</span><span class="p">)</span>
-<a id="__codelineno-57-39" name="__codelineno-57-39"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="c1">-- paramètre 1 = pompe</span>
-<a id="__codelineno-57-40" name="__codelineno-57-40"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="c1">-- paramètre 2 = 12</span>
-<a id="__codelineno-57-41" name="__codelineno-57-41"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="c1">-- paramètre 3 = 5</span>
-<a id="__codelineno-57-42" name="__codelineno-57-42"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="c1">-- paramètre 4 = 1</span>
-<a id="__codelineno-57-43" name="__codelineno-57-43"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="c1">-- échec : Duplicate entry 'pompe' for key 'articles.uk_articles_nom'</span>
-<a id="__codelineno-57-44" name="__codelineno-57-44"></a><span class="n">ConstraintViolationException</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Duplicate</span><span class="w"> </span><span class="n">entry</span><span class="w"> </span><span class="s1">'pompe'</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="k">key</span><span class="w"> </span><span class="s1">'articles.uk_articles_nom'</span>
-<a id="__codelineno-57-45" name="__codelineno-57-45"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="c1">-- transaction annulée (ROLLBACK)</span>
-<a id="__codelineno-57-46" name="__codelineno-57-46"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">select</span><span class="w"> </span><span class="n">a1_0</span><span class="p">.</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">a1_0</span><span class="p">.</span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">a1_0</span><span class="p">.</span><span class="n">prix</span><span class="p">,</span><span class="w"> </span><span class="n">a1_0</span><span class="p">.</span><span class="n">stockActuel</span><span class="p">,</span><span class="w"> </span><span class="n">a1_0</span><span class="p">.</span><span class="n">stockMinimum</span>
-<a id="__codelineno-57-47" name="__codelineno-57-47"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">articles</span><span class="w"> </span><span class="n">a1_0</span>
-<a id="__codelineno-57-48" name="__codelineno-57-48"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">a1_0</span><span class="p">.</span><span class="n">nom</span><span class="o">=?</span>
-<a id="__codelineno-57-49" name="__codelineno-57-49"></a><span class="w">    </span><span class="k">SQL</span><span class="o">&gt;</span><span class="w"> </span><span class="c1">-- paramètre 1 = vélo</span>
-<a id="__codelineno-57-50" name="__codelineno-57-50"></a><span class="n">article</span><span class="w"> </span><span class="p">[</span><span class="n">vélo</span><span class="p">]</span><span class="w"> </span><span class="n">dans</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="n">base</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">vélo</span><span class="p">,</span><span class="w"> </span><span class="mi">500</span><span class="p">,</span><span class="mi">00</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">]</span>
+<span class="normal"><a href="#__codelineno-57-50">50</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-57-1" name="__codelineno-57-1"></a>&gt; gradlew -q :transactions:run
+<a id="__codelineno-57-2" name="__codelineno-57-2"></a>--- deux ajouts dont le second viole l'unicité du nom
+<a id="__codelineno-57-3" name="__codelineno-57-3"></a>    SQL&gt; -- début de transaction
+<a id="__codelineno-57-4" name="__codelineno-57-4"></a>    SQL&gt; insert into articles (nom, prix, stockActuel, stockMinimum)
+<a id="__codelineno-57-5" name="__codelineno-57-5"></a>    SQL&gt; values (?, ?, ?, ?)
+<a id="__codelineno-57-6" name="__codelineno-57-6"></a>    SQL&gt; -- paramètre 1 = raquette
+<a id="__codelineno-57-7" name="__codelineno-57-7"></a>    SQL&gt; -- paramètre 2 = 80
+<a id="__codelineno-57-8" name="__codelineno-57-8"></a>    SQL&gt; -- paramètre 3 = 5
+<a id="__codelineno-57-9" name="__codelineno-57-9"></a>    SQL&gt; -- paramètre 4 = 2
+<a id="__codelineno-57-10" name="__codelineno-57-10"></a>    SQL&gt; insert into articles (nom, prix, stockActuel, stockMinimum)
+<a id="__codelineno-57-11" name="__codelineno-57-11"></a>    SQL&gt; values (?, ?, ?, ?)
+<a id="__codelineno-57-12" name="__codelineno-57-12"></a>    SQL&gt; -- paramètre 1 = vélo
+<a id="__codelineno-57-13" name="__codelineno-57-13"></a>    SQL&gt; -- paramètre 2 = 450
+<a id="__codelineno-57-14" name="__codelineno-57-14"></a>    SQL&gt; -- paramètre 3 = 3
+<a id="__codelineno-57-15" name="__codelineno-57-15"></a>    SQL&gt; -- paramètre 4 = 1
+<a id="__codelineno-57-16" name="__codelineno-57-16"></a>    SQL&gt; -- échec : Duplicate entry 'vélo' for key 'articles.uk_articles_nom'
+<a id="__codelineno-57-17" name="__codelineno-57-17"></a>    SQL&gt; -- transaction annulée (ROLLBACK)
+<a id="__codelineno-57-18" name="__codelineno-57-18"></a>ConstraintViolationException : contrainte [articles.uk_articles_nom] violée
+<a id="__codelineno-57-19" name="__codelineno-57-19"></a>    SQL&gt; select a1_0.id, a1_0.nom, a1_0.prix, a1_0.stockActuel, a1_0.stockMinimum
+<a id="__codelineno-57-20" name="__codelineno-57-20"></a>    SQL&gt; from articles a1_0
+<a id="__codelineno-57-21" name="__codelineno-57-21"></a>    SQL&gt; where a1_0.nom=?
+<a id="__codelineno-57-22" name="__codelineno-57-22"></a>    SQL&gt; -- paramètre 1 = raquette
+<a id="__codelineno-57-23" name="__codelineno-57-23"></a>article [raquette] dans la base : absent
+<a id="__codelineno-57-24" name="__codelineno-57-24"></a>--- transaction annulée
+<a id="__codelineno-57-25" name="__codelineno-57-25"></a>    SQL&gt; -- début de transaction
+<a id="__codelineno-57-26" name="__codelineno-57-26"></a>    SQL&gt; select a1_0.id, a1_0.nom, a1_0.prix, a1_0.stockActuel, a1_0.stockMinimum
+<a id="__codelineno-57-27" name="__codelineno-57-27"></a>    SQL&gt; from articles a1_0
+<a id="__codelineno-57-28" name="__codelineno-57-28"></a>    SQL&gt; where a1_0.nom='vélo'
+<a id="__codelineno-57-29" name="__codelineno-57-29"></a>    SQL&gt; update articles
+<a id="__codelineno-57-30" name="__codelineno-57-30"></a>    SQL&gt; set nom=?, prix=?, stockActuel=?, stockMinimum=?
+<a id="__codelineno-57-31" name="__codelineno-57-31"></a>    SQL&gt; where id=?
+<a id="__codelineno-57-32" name="__codelineno-57-32"></a>    SQL&gt; -- paramètre 1 = vélo
+<a id="__codelineno-57-33" name="__codelineno-57-33"></a>    SQL&gt; -- paramètre 2 = 500.00
+<a id="__codelineno-57-34" name="__codelineno-57-34"></a>    SQL&gt; -- paramètre 3 = 8
+<a id="__codelineno-57-35" name="__codelineno-57-35"></a>    SQL&gt; -- paramètre 4 = 5
+<a id="__codelineno-57-36" name="__codelineno-57-36"></a>    SQL&gt; -- paramètre 5 = 1
+<a id="__codelineno-57-37" name="__codelineno-57-37"></a>    SQL&gt; insert into articles (nom, prix, stockActuel, stockMinimum)
+<a id="__codelineno-57-38" name="__codelineno-57-38"></a>    SQL&gt; values (?, ?, ?, ?)
+<a id="__codelineno-57-39" name="__codelineno-57-39"></a>    SQL&gt; -- paramètre 1 = pompe
+<a id="__codelineno-57-40" name="__codelineno-57-40"></a>    SQL&gt; -- paramètre 2 = 12
+<a id="__codelineno-57-41" name="__codelineno-57-41"></a>    SQL&gt; -- paramètre 3 = 5
+<a id="__codelineno-57-42" name="__codelineno-57-42"></a>    SQL&gt; -- paramètre 4 = 1
+<a id="__codelineno-57-43" name="__codelineno-57-43"></a>    SQL&gt; -- échec : Duplicate entry 'pompe' for key 'articles.uk_articles_nom'
+<a id="__codelineno-57-44" name="__codelineno-57-44"></a>ConstraintViolationException : Duplicate entry 'pompe' for key 'articles.uk_articles_nom'
+<a id="__codelineno-57-45" name="__codelineno-57-45"></a>    SQL&gt; -- transaction annulée (ROLLBACK)
+<a id="__codelineno-57-46" name="__codelineno-57-46"></a>    SQL&gt; select a1_0.id, a1_0.nom, a1_0.prix, a1_0.stockActuel, a1_0.stockMinimum
+<a id="__codelineno-57-47" name="__codelineno-57-47"></a>    SQL&gt; from articles a1_0
+<a id="__codelineno-57-48" name="__codelineno-57-48"></a>    SQL&gt; where a1_0.nom=?
+<a id="__codelineno-57-49" name="__codelineno-57-49"></a>    SQL&gt; -- paramètre 1 = vélo
+<a id="__codelineno-57-50" name="__codelineno-57-50"></a>article [vélo] dans la base : [1, vélo, 500,00, 10, 5]
 </code></pre></div></td></tr></table></div>
 <p>Commentaires :</p>
 <ul>

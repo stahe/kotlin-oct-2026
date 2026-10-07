@@ -1652,12 +1652,12 @@
 <span class="normal"><a href="#__codelineno-6-3">3</a></span>
 <span class="normal"><a href="#__codelineno-6-4">4</a></span>
 <span class="normal"><a href="#__codelineno-6-5">5</a></span>
-<span class="normal"><a href="#__codelineno-6-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="o">&gt;</span><span class="w"> </span><span class="n">javap</span><span class="w"> </span><span class="o">-</span><span class="n">cp</span><span class="w"> </span><span class="n">build</span><span class="o">/</span><span class="n">classes</span><span class="o">/</span><span class="n">kotlin</span><span class="o">/</span><span class="n">main</span><span class="w"> </span><span class="n">bases01</span><span class="p">.</span><span class="na">Bases01Kt</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="n">Compiled</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="s">"Bases01.kt"</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kd">class</span> <span class="nc">bases01</span><span class="p">.</span><span class="na">Bases01Kt</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">();</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">java</span><span class="p">.</span><span class="na">lang</span><span class="p">.</span><span class="na">String</span><span class="o">[]</span><span class="p">);</span>
-<a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="p">}</span>
+<span class="normal"><a href="#__codelineno-6-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>&gt; javap -cp build/classes/kotlin/main bases01.Bases01Kt
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a>Compiled from "Bases01.kt"
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a>public final class bases01.Bases01Kt {
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a>  public static final void main();
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a>  public static void main(java.lang.String[]);
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a>}
 </code></pre></div></td></tr></table></div>
 <p>La comparaison avec Java 25 est instructive. Java 25 permet lui aussi d&#x27;écrire un programme sans déclarer de classe (un « fichier source compact », avec une méthode <strong><em>[void main()]</em></strong>) : le compilateur Java enveloppe alors le contenu du fichier dans une classe <strong>implicite</strong> portant le nom du fichier. Kotlin fait la même chose depuis sa première version, avec deux différences :</p>
 <ul>
@@ -4223,11 +4223,11 @@
 <span class="normal"><a href="#__codelineno-60-2">2</a></span>
 <span class="normal"><a href="#__codelineno-60-3">3</a></span>
 <span class="normal"><a href="#__codelineno-60-4">4</a></span>
-<span class="normal"><a href="#__codelineno-60-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-60-1" name="__codelineno-60-1"></a><span class="k">if</span><span class="w"> </span><span class="o">(</span>condition<span class="o">)</span><span class="w"> </span><span class="o">{</span>
-<a id="__codelineno-60-2" name="__codelineno-60-2"></a><span class="w">    </span>actions_condition_vraie
-<a id="__codelineno-60-3" name="__codelineno-60-3"></a><span class="o">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="o">{</span>
-<a id="__codelineno-60-4" name="__codelineno-60-4"></a><span class="w">    </span>actions_condition_fausse
-<a id="__codelineno-60-5" name="__codelineno-60-5"></a><span class="o">}</span>
+<span class="normal"><a href="#__codelineno-60-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-60-1" name="__codelineno-60-1"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">condition</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-60-2" name="__codelineno-60-2"></a><span class="w">    </span><span class="n">actions_condition_vraie</span>
+<a id="__codelineno-60-3" name="__codelineno-60-3"></a><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-60-4" name="__codelineno-60-4"></a><span class="w">    </span><span class="n">actions_condition_fausse</span>
+<a id="__codelineno-60-5" name="__codelineno-60-5"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>Notes :</p>
 <ul>
@@ -4247,7 +4247,7 @@
 <a id="__codelineno-61-4" name="__codelineno-61-4"></a>finsi
 </code></pre></div></td></tr></table></div>
 <p>Exemple :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-62-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-62-1" name="__codelineno-62-1"></a><span class="k">if</span><span class="w"> </span><span class="o">(</span>x<span class="w"> </span>&gt;<span class="w"> </span><span class="m">0</span><span class="o">)</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="nv">nx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>nx<span class="w"> </span>+<span class="w"> </span><span class="m">1</span><span class="p">;</span><span class="w"> </span><span class="nv">sx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>sx<span class="w"> </span>+<span class="w"> </span>x<span class="w"> </span><span class="o">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="nv">dx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>dx<span class="w"> </span>-<span class="w"> </span>x
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-62-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-62-1" name="__codelineno-62-1"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">nx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nx</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span><span class="p">;</span><span class="w"> </span><span class="n">sx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sx</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="n">dx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dx</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">x</span>
 </code></pre></div></td></tr></table></div>
 <p>La grande différence avec Java est que le <em>[if]</em> de Kotlin est aussi une <strong>expression</strong> : il rend la valeur de la branche exécutée. On peut donc écrire <strong><em>[val max = if (a &gt; b) a else b]</em></strong>. C&#x27;est pourquoi Kotlin n&#x27;a pas d&#x27;opérateur ternaire <strong><em>[condition ? valeur1 : valeur2]</em></strong> : le <em>[if]</em> en tient lieu. Utilisé comme expression, le <em>[if]</em> doit avoir une clause <em>[else]</em>, sans quoi il n&#x27;aurait pas de valeur lorsque la condition est fausse.</p>
 <p>On peut imbriquer les structures de choix. Se pose alors parfois le problème illustré par le programme <em>[Bases17.kt]</em> :</p>
@@ -4679,9 +4679,9 @@
 <p>Kotlin n&#x27;a pas la boucle <em>[for]</em> « à trois arguments » du C et de Java (<strong><em>[for (i = id; i &lt;= if; i = i + ip)]</em></strong>). Sa boucle <em>[for]</em> parcourt <strong>les éléments</strong> d&#x27;un intervalle, d&#x27;un tableau ou d&#x27;une collection ; c&#x27;est l&#x27;équivalent de la boucle for-each de Java. Pour faire varier un entier, on parcourt un <strong>intervalle</strong> :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-71-1">1</a></span>
 <span class="normal"><a href="#__codelineno-71-2">2</a></span>
-<span class="normal"><a href="#__codelineno-71-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-71-1" name="__codelineno-71-1"></a><span class="k">for</span><span class="w"> </span><span class="o">(</span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span>id..if<span class="w"> </span>step<span class="w"> </span>ip<span class="o">)</span><span class="w"> </span><span class="o">{</span>
-<a id="__codelineno-71-2" name="__codelineno-71-2"></a><span class="w">    </span>actions
-<a id="__codelineno-71-3" name="__codelineno-71-3"></a><span class="o">}</span>
+<span class="normal"><a href="#__codelineno-71-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-71-1" name="__codelineno-71-1"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">id</span><span class="p">..</span><span class="na">if</span><span class="w"> </span><span class="n">step</span><span class="w"> </span><span class="n">ip</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-71-2" name="__codelineno-71-2"></a><span class="w">    </span><span class="n">actions</span>
+<a id="__codelineno-71-3" name="__codelineno-71-3"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>Notes :</p>
 <ul>
@@ -4714,9 +4714,9 @@
 <p>La syntaxe est la suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-74-1">1</a></span>
 <span class="normal"><a href="#__codelineno-74-2">2</a></span>
-<span class="normal"><a href="#__codelineno-74-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-74-1" name="__codelineno-74-1"></a><span class="k">for</span><span class="w"> </span><span class="o">(</span>variable<span class="w"> </span><span class="k">in</span><span class="w"> </span>collection<span class="o">)</span><span class="w"> </span><span class="o">{</span>
-<a id="__codelineno-74-2" name="__codelineno-74-2"></a><span class="w">    </span>instructions
-<a id="__codelineno-74-3" name="__codelineno-74-3"></a><span class="o">}</span>
+<span class="normal"><a href="#__codelineno-74-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-74-1" name="__codelineno-74-1"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">variable</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">collection</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-74-2" name="__codelineno-74-2"></a><span class="w">    </span><span class="n">instructions</span>
+<a id="__codelineno-74-3" name="__codelineno-74-3"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>Notes :</p>
 <ul>
@@ -4738,9 +4738,9 @@
 <p><strong>Structure tantque (while)</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-76-1">1</a></span>
 <span class="normal"><a href="#__codelineno-76-2">2</a></span>
-<span class="normal"><a href="#__codelineno-76-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-76-1" name="__codelineno-76-1"></a>while (condition) {
-<a id="__codelineno-76-2" name="__codelineno-76-2"></a>    actions
-<a id="__codelineno-76-3" name="__codelineno-76-3"></a>}
+<span class="normal"><a href="#__codelineno-76-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-76-1" name="__codelineno-76-1"></a><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">condition</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-76-2" name="__codelineno-76-2"></a><span class="w">    </span><span class="n">actions</span>
+<a id="__codelineno-76-3" name="__codelineno-76-3"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>On boucle tant que la condition est vérifiée. La boucle peut ne jamais être exécutée. Les notes sont les mêmes que pour le <em>[for]</em>. La structure algorithmique correspondante est la structure tantque :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-77-1">1</a></span>
@@ -4753,9 +4753,9 @@
 <p>La syntaxe est la suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-78-1">1</a></span>
 <span class="normal"><a href="#__codelineno-78-2">2</a></span>
-<span class="normal"><a href="#__codelineno-78-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-78-1" name="__codelineno-78-1"></a><span class="k">do</span><span class="w"> </span><span class="o">{</span>
-<a id="__codelineno-78-2" name="__codelineno-78-2"></a><span class="w">    </span>instructions
-<a id="__codelineno-78-3" name="__codelineno-78-3"></a><span class="o">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="o">(</span>condition<span class="o">)</span>
+<span class="normal"><a href="#__codelineno-78-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-78-1" name="__codelineno-78-1"></a><span class="k">do</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-78-2" name="__codelineno-78-2"></a><span class="w">    </span><span class="n">instructions</span>
+<a id="__codelineno-78-3" name="__codelineno-78-3"></a><span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">condition</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p>On boucle jusqu&#x27;à ce que la condition devienne fausse. Ici, la boucle est faite au moins une fois. Particularité de Kotlin : une variable déclarée dans le corps de la boucle est visible dans la condition du <em>[while]</em>, ce qui permet d&#x27;écrire <strong><em>[do { val ligne = readln() } while (ligne != &quot;fin&quot;)]</em></strong>. La structure algorithmique correspondante est la structure répéter ... jusqu&#x27;à :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-79-1">1</a></span>
@@ -4770,11 +4770,11 @@
 <span class="normal"><a href="#__codelineno-80-2">2</a></span>
 <span class="normal"><a href="#__codelineno-80-3">3</a></span>
 <span class="normal"><a href="#__codelineno-80-4">4</a></span>
-<span class="normal"><a href="#__codelineno-80-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-80-1" name="__codelineno-80-1"></a>instructions_depart
-<a id="__codelineno-80-2" name="__codelineno-80-2"></a>while (condition) {
-<a id="__codelineno-80-3" name="__codelineno-80-3"></a>    instructions
-<a id="__codelineno-80-4" name="__codelineno-80-4"></a>    instructions_fin_boucle
-<a id="__codelineno-80-5" name="__codelineno-80-5"></a>}
+<span class="normal"><a href="#__codelineno-80-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-80-1" name="__codelineno-80-1"></a><span class="n">instructions_depart</span>
+<a id="__codelineno-80-2" name="__codelineno-80-2"></a><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">condition</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-80-3" name="__codelineno-80-3"></a><span class="w">    </span><span class="n">instructions</span>
+<a id="__codelineno-80-4" name="__codelineno-80-4"></a><span class="w">    </span><span class="n">instructions_fin_boucle</span>
+<a id="__codelineno-80-5" name="__codelineno-80-5"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <h4 id="3543-instructions-de-gestion-de-boucle">3.5.4.3. <span style="color: #2e74b5">Instructions de gestion de boucle</span></h4>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><b>Instruction</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><b>Rôle</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><i>[break]</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">fait sortir de la boucle <i>[for]</i>, <i>[while]</i>, <i>[do ... while]</i></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><i>[continue]</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">fait passer à l&#x27;itération suivante des boucles <i>[for]</i>, <i>[while]</i>, <i>[do ... while]</i></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><i>[break@etiquette]</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">fait sortir de la boucle précédée de l&#x27;étiquette <i>[etiquette@]</i>, même si l&#x27;instruction se trouve dans une boucle imbriquée</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><i>[continue@etiquette]</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">fait passer à l&#x27;itération suivante de la boucle précédée de l&#x27;étiquette <i>[etiquette@]</i></div></td></tr></table>
@@ -5069,14 +5069,14 @@
 <span class="normal"><a href="#__codelineno-84-5">5</a></span>
 <span class="normal"><a href="#__codelineno-84-6">6</a></span>
 <span class="normal"><a href="#__codelineno-84-7">7</a></span>
-<span class="normal"><a href="#__codelineno-84-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-84-1" name="__codelineno-84-1"></a>try {
-<a id="__codelineno-84-2" name="__codelineno-84-2"></a>    code susceptible de générer les exceptions
-<a id="__codelineno-84-3" name="__codelineno-84-3"></a>} catch (e1: ArrayIndexOutOfBoundsException) {
-<a id="__codelineno-84-4" name="__codelineno-84-4"></a>    traiter l'exception e1
-<a id="__codelineno-84-5" name="__codelineno-84-5"></a>} catch (e2: NumberFormatException) {
-<a id="__codelineno-84-6" name="__codelineno-84-6"></a>    traiter l'exception e2
-<a id="__codelineno-84-7" name="__codelineno-84-7"></a>}
-<a id="__codelineno-84-8" name="__codelineno-84-8"></a>instruction suivante
+<span class="normal"><a href="#__codelineno-84-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-84-1" name="__codelineno-84-1"></a><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-84-2" name="__codelineno-84-2"></a><span class="w">    </span><span class="n">code</span><span class="w"> </span><span class="n">susceptible</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">générer</span><span class="w"> </span><span class="n">les</span><span class="w"> </span><span class="n">exceptions</span>
+<a id="__codelineno-84-3" name="__codelineno-84-3"></a><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">e1</span><span class="p">:</span><span class="w"> </span><span class="n">ArrayIndexOutOfBoundsException</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-84-4" name="__codelineno-84-4"></a><span class="w">    </span><span class="n">traiter</span><span class="w"> </span><span class="n">l</span><span class="err">'</span><span class="n">exception</span><span class="w"> </span><span class="n">e1</span>
+<a id="__codelineno-84-5" name="__codelineno-84-5"></a><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">e2</span><span class="p">:</span><span class="w"> </span><span class="n">NumberFormatException</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-84-6" name="__codelineno-84-6"></a><span class="w">    </span><span class="n">traiter</span><span class="w"> </span><span class="n">l</span><span class="err">'</span><span class="n">exception</span><span class="w"> </span><span class="n">e2</span>
+<a id="__codelineno-84-7" name="__codelineno-84-7"></a><span class="p">}</span>
+<a id="__codelineno-84-8" name="__codelineno-84-8"></a><span class="n">instruction</span><span class="w"> </span><span class="n">suivante</span>
 </code></pre></div></td></tr></table></div>
 <p>Les clauses <em>[catch]</em> sont examinées dans l&#x27;ordre ; la première dont le type correspond à l&#x27;exception est exécutée. Une clause qui gère un type d&#x27;exception doit donc précéder celle qui gère un type plus général. Attention : contrairement au compilateur Java, le compilateur Kotlin ne refuse pas une clause qui ne pourrait jamais être atteinte ; c&#x27;est au programmeur d&#x27;y veiller (nous y reviendrons) ;</p>
 <ul>
@@ -5337,7 +5337,7 @@
 <p>Utiliser une exception pour contrôler une saisie est une pratique courante en Java, mais Kotlin propose mieux : la fonction <em>[toIntOrNull()]</em>, rencontrée au début de ce chapitre, rend <em>[null]</em> au lieu de lancer une exception. On écrirait alors <strong><em>[val age = readln().toIntOrNull()]</em></strong> puis <strong><em>[if (age != null &amp;&amp; age &gt;= 1)]</em></strong>, sans <em>[try]</em>. C&#x27;est ce que nous ferons dans l&#x27;application exemple qui suit. Les exceptions doivent rester réservées aux situations exceptionnelles.</p>
 <h3 id="364-plusieurs-clauses-catch-et-lancement-dexceptions">3.6.4. <span style="color: #1f4d78">Plusieurs clauses catch et lancement d&#x27;exceptions</span></h3>
 <p>Le programme peut lui-même lancer une exception avec l&#x27;instruction <em>[throw]</em> :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-92-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-92-1" name="__codelineno-92-1"></a>throw IllegalArgumentException("message d'erreur")
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-92-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-92-1" name="__codelineno-92-1"></a><span class="k">throw</span><span class="w"> </span><span class="n">IllegalArgumentException</span><span class="p">(</span><span class="s">"message d'erreur"</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p>Il n&#x27;y a pas d&#x27;opérateur <em>[new]</em> en Kotlin : un objet est créé en appelant simplement le constructeur de sa classe. L&#x27;exécution de la fonction en cours s&#x27;arrête et l&#x27;exception remonte vers les fonctions appelantes jusqu&#x27;à ce qu&#x27;une clause <em>[catch]</em> la gère ; si aucune ne le fait, le programme s&#x27;arrête en affichant l&#x27;exception et la pile des appels. Dans une clause <em>[catch]</em>, l&#x27;instruction <strong><em>[throw e]</em></strong> relance l&#x27;exception en cours, par exemple après l&#x27;avoir journalisée.</p>
 <p>En Kotlin, <em>[throw]</em> est une expression, de type <em>[Nothing]</em> (comme <em>[exitProcess]</em>). On peut donc l&#x27;utiliser là où une valeur est attendue, par exemple derrière l&#x27;opérateur <em>[?:]</em> : <strong><em>[val nom = saisie ?: throw IllegalArgumentException(&quot;nom absent&quot;)]</em></strong>.</p>
@@ -6274,9 +6274,9 @@
 <p>On peut comparer une variable aux différentes valeurs possibles de l&#x27;énumération avec l&#x27;opérateur == :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-117-1">1</a></span>
 <span class="normal"><a href="#__codelineno-117-2">2</a></span>
-<span class="normal"><a href="#__codelineno-117-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-117-1" name="__codelineno-117-1"></a><span class="k">if</span><span class="w"> </span><span class="o">(</span><span class="nv">maMention</span><span class="w"> </span><span class="o">==</span><span class="w"> </span>Mentions.PASSABLE<span class="o">)</span><span class="w"> </span><span class="o">{</span>
-<a id="__codelineno-117-2" name="__codelineno-117-2"></a><span class="w">    </span>println<span class="o">(</span><span class="s2">"Peut mieux faire"</span><span class="o">)</span>
-<a id="__codelineno-117-3" name="__codelineno-117-3"></a><span class="o">}</span>
+<span class="normal"><a href="#__codelineno-117-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-117-1" name="__codelineno-117-1"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">maMention</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">Mentions</span><span class="p">.</span><span class="na">PASSABLE</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-117-2" name="__codelineno-117-2"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"Peut mieux faire"</span><span class="p">)</span>
+<a id="__codelineno-117-3" name="__codelineno-117-3"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>Comme en Java, et contrairement à d&#x27;autres langages où une énumération n&#x27;est qu&#x27;un ensemble d&#x27;entiers nommés, une énumération Kotlin est une <strong>classe</strong>, compilée en une classe dérivée de <em>[java.lang.Enum]</em>, dont les seuls objets sont les constantes déclarées. Chaque constante est un objet unique, créé une fois pour toutes. Chaque constante connaît son nom (propriété <em>[name]</em>, ou <em>[toString()]</em>) et son numéro d&#x27;ordre dans la déclaration (propriété <em>[ordinal]</em>, à partir de 0). Les constantes sont comparables selon cet ordre : on peut écrire <strong><em>[m1 &lt; m2]</em></strong>. Toute énumération dispose en outre de :</p>
 <ul>
